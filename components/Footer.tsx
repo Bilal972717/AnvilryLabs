@@ -66,7 +66,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-line pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 pr-44 text-xs text-steel sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pr-52">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 pr-36 text-xs text-steel sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pr-40">
           <p>© 2026 Anvilry Labs · anvilrylabs.com</p>
           <p className="font-mono tracking-wide">Software, properly forged.</p>
         </div>

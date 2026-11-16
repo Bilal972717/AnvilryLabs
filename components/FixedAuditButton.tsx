@@ -12,32 +12,11 @@ export function FixedAuditButton() {
       <button
         type="button"
         onClick={openAudit}
-        className="pointer-events-auto group relative overflow-hidden rounded-md border border-heat/40 bg-panel text-left shadow-[0_16px_40px_rgba(20,22,28,0.12)] transition hover:-translate-y-0.5 hover:border-heat focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat dark:border-heat/50 dark:bg-[#12151c] dark:shadow-[0_18px_48px_rgba(0,0,0,0.55)]"
+        className="pointer-events-auto inline-flex items-center gap-2.5 rounded-md border border-line bg-panel/95 px-4 py-2.5 text-sm font-semibold text-ink shadow-[0_8px_24px_rgba(20,22,28,0.08)] backdrop-blur-md transition hover:border-heat/50 hover:text-heat focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat dark:bg-panel/90 dark:shadow-[0_10px_28px_rgba(0,0,0,0.45)]"
         aria-label="Open free audit"
       >
-        <span className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brass via-heat to-heat-deep" aria-hidden="true" />
-        <span className="absolute inset-x-0 top-0 h-px heat-bar opacity-80" aria-hidden="true" />
-        <span className="flex items-center gap-3 py-3 pr-4 pl-4 sm:pr-5">
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-heat text-white shadow-[0_6px_16px_rgba(224,77,26,0.35)] transition group-hover:brightness-110">
-            <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden="true">
-              <path
-                d="M3 8.5h7.5M8 5l3.5 3.5L8 12"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-          <span className="min-w-0">
-            <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-heat">
-              Free audit
-            </span>
-            <span className="mt-0.5 block text-sm font-semibold text-ink">
-              Get yours
-            </span>
-          </span>
-        </span>
+        <span className="h-1.5 w-1.5 rounded-full bg-heat" aria-hidden="true" />
+        Free audit
       </button>
     </div>
   );
