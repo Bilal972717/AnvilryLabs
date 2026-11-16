@@ -4,7 +4,6 @@ import { AuditProvider } from "@/components/AuditProvider";
 import { FixedAuditButton } from "@/components/FixedAuditButton";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
@@ -64,7 +63,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={cn(
         "h-full antialiased",
         fraunces.variable,
@@ -73,22 +71,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       )}
     >
       <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
-        <ThemeProvider>
-          <a
-            href="#main"
-            className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-md bg-heat px-4 py-2 text-sm font-semibold text-white transition focus:translate-y-0"
-          >
-            Skip to content
-          </a>
-          <AuditProvider>
-            <Header />
-            <main id="main" className="flex-1">
-              {children}
-            </main>
-            <Footer />
-            <FixedAuditButton />
-          </AuditProvider>
-        </ThemeProvider>
+        <a
+          href="#main"
+          className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-md bg-heat px-4 py-2 text-sm font-semibold text-white transition focus:translate-y-0"
+        >
+          Skip to content
+        </a>
+        <AuditProvider>
+          <Header />
+          <main id="main" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+          <FixedAuditButton />
+        </AuditProvider>
       </body>
     </html>
   );

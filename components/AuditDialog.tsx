@@ -98,7 +98,7 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
       <DialogContent
         showCloseButton={false}
         className={cn(
-          "flex max-h-[92dvh] w-full max-w-[calc(100%-0rem)] flex-col gap-0 overflow-hidden rounded-t-2xl border border-line bg-panel p-0 text-ink shadow-[0_40px_100px_rgba(0,0,0,0.25)] ring-0 dark:shadow-[0_40px_100px_rgba(0,0,0,0.65)]",
+          "flex max-h-[92dvh] w-full max-w-[calc(100%-0rem)] flex-col gap-0 overflow-hidden rounded-t-2xl border border-line bg-panel p-0 text-ink shadow-[0_40px_100px_rgba(0,0,0,0.25)] ring-0",
           "top-auto bottom-0 left-1/2 translate-x-[-50%] translate-y-0 sm:top-1/2 sm:bottom-auto sm:max-h-[min(90vh,880px)] sm:max-w-3xl sm:translate-y-[-50%] sm:rounded-2xl",
         )}
       >

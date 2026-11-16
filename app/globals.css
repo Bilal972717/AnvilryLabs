@@ -2,10 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  /* Light forge (default for system light / light theme) */
   --paper: #f4f5f8;
   --paper-elevated: #ffffff;
   --ink: #14161c;
@@ -67,69 +64,6 @@
   --sidebar-accent: #e9ecf1;
   --sidebar-accent-foreground: #14161c;
   --sidebar-border: rgba(20, 22, 28, 0.12);
-  --sidebar-ring: #ef5520;
-}
-
-.dark {
-  --paper: #08090c;
-  --paper-elevated: #111318;
-  --ink: #f2eee6;
-  --ink-soft: #d2cdc3;
-  --steel: #8e949e;
-  --line: rgba(242, 238, 230, 0.12);
-  --heat: #ef5520;
-  --heat-deep: #c83f12;
-  --brass: #c4a36a;
-  --forge: #050608;
-  --forge-mid: #151820;
-  --mist: rgba(242, 238, 230, 0.05);
-  --panel: #10131a;
-  --panel-muted: rgba(242, 238, 230, 0.04);
-  --overlay: rgba(0, 0, 0, 0.65);
-  --workshop-a: #0c0e12;
-  --workshop-b: #08090c;
-  --workshop-c: #0a0b0f;
-  --forge-plane-a: #12151c;
-  --forge-plane-b: #07080b;
-  --forge-plane-c: #0b0d12;
-  --metal-a: #161922;
-  --metal-b: #0e1015;
-  --grid-line: rgba(242, 238, 230, 0.028);
-  --glow-heat: rgba(239, 85, 32, 0.22);
-  --glow-brass: rgba(196, 163, 106, 0.1);
-  --hero-vignette: rgba(5, 6, 8, 0.55);
-  --surface-lift: rgba(242, 238, 230, 0.03);
-  --shadow-panel: 0 40px 100px rgba(0, 0, 0, 0.45);
-  --background: #08090c;
-  --foreground: #f2eee6;
-  --card: #111318;
-  --card-foreground: #f2eee6;
-  --popover: #10131a;
-  --popover-foreground: #f2eee6;
-  --primary: #ef5520;
-  --primary-foreground: #ffffff;
-  --secondary: #151820;
-  --secondary-foreground: #f2eee6;
-  --muted: #151820;
-  --muted-foreground: #8e949e;
-  --accent: #1a1210;
-  --accent-foreground: #f2eee6;
-  --destructive: oklch(0.65 0.2 25);
-  --border: rgba(242, 238, 230, 0.12);
-  --input: rgba(242, 238, 230, 0.15);
-  --ring: #ef5520;
-  --chart-1: #ef5520;
-  --chart-2: #c4a36a;
-  --chart-3: #8e949e;
-  --chart-4: #d2cdc3;
-  --chart-5: #151820;
-  --sidebar: #111318;
-  --sidebar-foreground: #f2eee6;
-  --sidebar-primary: #ef5520;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #151820;
-  --sidebar-accent-foreground: #f2eee6;
-  --sidebar-border: rgba(242, 238, 230, 0.12);
   --sidebar-ring: #ef5520;
 }
 
@@ -202,10 +136,6 @@ html {
   color-scheme: light;
 }
 
-html.dark {
-  color-scheme: dark;
-}
-
 body {
   background: var(--paper);
   color: var(--ink);
@@ -267,11 +197,6 @@ body {
   opacity: 0.028;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
-}
-
-.dark .noise-overlay::before {
-  opacity: 0.045;
-  mix-blend-mode: overlay;
 }
 
 .heat-bar {
@@ -403,24 +328,12 @@ body {
     filter 0.2s ease;
 }
 
-.dark .btn-heat {
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 10px 30px rgba(239, 85, 32, 0.28);
-}
-
 .btn-heat:hover {
   filter: brightness(1.06);
   transform: translateY(-1px);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.22) inset,
     0 12px 28px rgba(224, 77, 26, 0.3);
-}
-
-.dark .btn-heat:hover {
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.12) inset,
-    0 14px 36px rgba(239, 85, 32, 0.38);
 }
 
 .btn-heat:focus-visible,

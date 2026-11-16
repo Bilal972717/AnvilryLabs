@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnvilMark } from "@/components/AnvilMark";
 import { useAudit } from "@/components/AuditProvider";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -154,7 +153,6 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            <ThemeToggle />
             <button
               type="button"
               onClick={openAudit}
@@ -203,7 +201,7 @@ export function Header() {
             role="dialog"
             aria-modal="true"
             aria-label="Navigation"
-            className="absolute right-0 top-0 flex h-full w-[min(86vw,22rem)] flex-col border-l border-line bg-panel shadow-[-20px_0_48px_rgba(20,22,28,0.12)] dark:shadow-[-24px_0_60px_rgba(0,0,0,0.25)]"
+            className="absolute right-0 top-0 flex h-full w-[min(86vw,22rem)] flex-col border-l border-line bg-panel shadow-[-20px_0_48px_rgba(20,22,28,0.12)]"
           >
             <div className="flex items-center justify-between border-b border-line px-5 py-4">
               <div className="flex items-center gap-2.5">

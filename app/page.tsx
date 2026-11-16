@@ -248,7 +248,7 @@ export default function Home() {
               <Reveal
                 key={item.n}
                 delayMs={i * 70}
-                className="group relative overflow-hidden rounded-2xl border border-line bg-panel p-7 shadow-[0_10px_30px_rgba(20,22,28,0.04)] transition hover:border-heat/40 hover:shadow-[0_14px_36px_rgba(20,22,28,0.08)] dark:bg-panel-muted dark:shadow-none dark:hover:bg-mist dark:hover:shadow-none sm:p-8"
+                className="group relative overflow-hidden rounded-2xl border border-line bg-panel p-7 shadow-[0_10px_30px_rgba(20,22,28,0.04)] transition hover:border-heat/40 hover:shadow-[0_14px_36px_rgba(20,22,28,0.08)] sm:p-8"
               >
                 <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-heat/0 transition group-hover:bg-heat/15" />
                 <p className="font-mono text-[11px] text-brass">{item.n}</p>
@@ -328,7 +328,7 @@ launch(site).thenCare();`}</code>
               <Reveal
                 key={item.title}
                 delayMs={i * 35}
-                className="service-row rounded-xl border border-line bg-panel px-5 py-6 dark:bg-panel-muted sm:px-6"
+                className="service-row rounded-xl border border-line bg-panel px-5 py-6 sm:px-6"
               >
                 <div className="grid items-baseline gap-3 sm:grid-cols-[7.5rem_1fr_1.15fr]">
                   <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-brass">
@@ -420,7 +420,7 @@ launch(site).thenCare();`}</code>
               <Reveal
                 key={item.title}
                 delayMs={i * 80}
-                className="rounded-2xl border border-line bg-panel p-6 shadow-[0_10px_30px_rgba(20,22,28,0.04)] dark:bg-gradient-to-b dark:from-panel-muted dark:to-transparent dark:shadow-none"
+                className="rounded-2xl border border-line bg-panel p-6 shadow-[0_10px_30px_rgba(20,22,28,0.04)]"
               >
                 <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-heat">
                   Problem
@@ -450,7 +450,7 @@ launch(site).thenCare();`}</code>
             {industries.map((item) => (
               <span
                 key={item}
-                className="rounded-md border border-line bg-panel px-3.5 py-2 text-sm text-ink-soft shadow-[0_1px_0_rgba(20,22,28,0.04)] transition hover:border-brass/40 hover:text-ink dark:bg-panel-muted dark:shadow-none"
+                className="rounded-md border border-line bg-panel px-3.5 py-2 text-sm text-ink-soft shadow-[0_1px_0_rgba(20,22,28,0.04)] transition hover:border-brass/40 hover:text-ink"
               >
                 {item}
               </span>

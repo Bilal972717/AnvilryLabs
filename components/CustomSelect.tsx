@@ -203,7 +203,7 @@ export function CustomSelect({
                 left: coords.left,
                 width: coords.width,
               }}
-              className="z-[80] max-h-56 overflow-auto rounded-xl border border-line bg-panel p-1.5 shadow-[0_20px_50px_rgba(20,22,28,0.14)] outline-none dark:shadow-[0_20px_50px_rgba(0,0,0,0.55)]"
+              className="z-[80] max-h-56 overflow-auto rounded-xl border border-line bg-panel p-1.5 shadow-[0_20px_50px_rgba(20,22,28,0.14)] outline-none"
             >
               {options.map((option, index) => {
                 const selected = option === value;
