@@ -1,23 +1,23 @@
+import Image from "next/image";
+
 export function ForgeBackdrop() {
   return (
-    <div className="noise-overlay pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, transparent 0%, var(--hero-vignette) 100%)",
-        }}
+    <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <Image
+        src="/hero-bg.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="scale-105 object-cover object-center"
       />
-      <div className="absolute -right-[8%] top-[-5%] h-[85%] w-[70%] rounded-[42%] bg-[radial-gradient(circle_at_35%_35%,rgba(239,85,32,0.32),rgba(239,85,32,0.08)_40%,transparent_68%)] blur-2xl" />
-      <div className="absolute bottom-[-18%] left-[-12%] h-[58%] w-[52%] rounded-full bg-[radial-gradient(circle,rgba(196,163,106,0.16),transparent_65%)] blur-3xl" />
 
-      <div className="ember left-[12%] top-[28%] h-2 w-2" style={{ animationDelay: "0s" }} />
-      <div className="ember left-[22%] top-[62%] h-1.5 w-1.5" style={{ animationDelay: "1.4s" }} />
-      <div className="ember right-[34%] top-[24%] h-2.5 w-2.5" style={{ animationDelay: "2.2s" }} />
-      <div className="ember right-[18%] top-[55%] h-1.5 w-1.5" style={{ animationDelay: "3.1s" }} />
-      <div className="ember left-[48%] top-[78%] h-2 w-2" style={{ animationDelay: "4s" }} />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(243,245,249,0.55)_0%,rgba(243,245,249,0.35)_40%,rgba(243,245,249,0.62)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(243,245,249,0.78)_0%,rgba(243,245,249,0.35)_48%,transparent_72%)]" />
+      <div className="noise-overlay absolute inset-0 opacity-60" />
 
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-paper via-paper/80 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-paper via-paper/85 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-paper/50 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-px heat-bar opacity-90" />
     </div>
   );

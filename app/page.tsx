@@ -2,7 +2,6 @@ import Link from "next/link";
 import { AuditTrigger } from "@/components/AuditTrigger";
 import { Faq } from "@/components/Faq";
 import { ForgeBackdrop } from "@/components/ForgeBackdrop";
-import { HeroForgePanel } from "@/components/HeroForgePanel";
 import { ProcessStages } from "@/components/ProcessStages";
 import { Reveal } from "@/components/Reveal";
 
@@ -146,82 +145,93 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-workshop">
+      <section className="relative overflow-hidden bg-paper">
         <ForgeBackdrop />
-        <div className="relative mx-auto grid min-h-[calc(100svh-var(--site-header-h))] max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="relative z-10 max-w-2xl">
-            <div className="animate-rise inline-flex items-center gap-3 rounded-full border border-line bg-panel-muted px-3 py-1.5 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_12px_rgba(239,85,32,0.9)]" />
-              <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-brass">
-                Software and digital growth agency
-              </p>
-            </div>
+        <div className="relative mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-6xl items-center justify-center px-5 py-16 text-center sm:px-8">
+          <div className="relative z-10 mx-auto max-w-3xl">
+            <p className="animate-rise font-mono text-[11px] uppercase tracking-[0.24em] text-brass">
+              Software, properly forged
+            </p>
 
-            <h1 className="animate-rise-delay-1 mt-7 font-display text-[clamp(3rem,9vw,6.75rem)] font-bold leading-[0.9] tracking-[-0.03em] text-ink">
+            <h1 className="animate-rise-delay-1 mt-5 font-display text-[clamp(3.25rem,9.5vw,7rem)] font-semibold leading-[0.88] tracking-[-0.035em] text-ink">
               Anvilry{" "}
-              <span className="bg-gradient-to-r from-ink via-brass to-heat bg-clip-text text-transparent">
+              <span className="bg-gradient-to-br from-ink via-heat to-brass bg-clip-text text-transparent">
                 Labs
               </span>
             </h1>
 
-            <p className="animate-rise-delay-2 mt-7 max-w-xl font-display text-2xl font-medium leading-snug text-ink-soft sm:text-3xl">
+            <p className="animate-rise-delay-2 mx-auto mt-8 max-w-xl font-display text-[1.65rem] font-medium leading-snug text-ink-soft sm:text-3xl">
               We build software that holds up.
             </p>
-            <p className="animate-rise-delay-2 mt-4 max-w-lg text-base leading-relaxed text-steel sm:text-lg">
+            <p className="animate-rise-delay-2 mx-auto mt-4 max-w-lg text-base leading-relaxed text-steel sm:text-lg">
               Websites, apps and custom software built with a craftsperson’s care
               and an engineer’s rigor, then made easy to find.
             </p>
 
-            <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center gap-3">
-              <AuditTrigger className="btn-heat rounded-md px-5 py-3.5 text-sm font-semibold text-white">
+            <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center justify-center gap-3">
+              <AuditTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-white">
                 Get my free audit
               </AuditTrigger>
               <Link
                 href="/contact"
-                className="btn-ghost rounded-md px-5 py-3.5 text-sm font-semibold text-ink"
+                className="btn-ghost rounded-lg px-6 py-3.5 text-sm font-semibold text-ink"
               >
                 Start a project
               </Link>
             </div>
           </div>
-
-          <div className="animate-rise-delay-3 relative z-10 hidden lg:block">
-            <HeroForgePanel />
-          </div>
         </div>
       </section>
 
       {/* Commitments */}
-      <section className="relative border-y border-line bg-paper-elevated">
-        <div className="absolute inset-x-0 top-0 h-px heat-bar opacity-60" />
-        <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-5 py-12 sm:grid-cols-4 sm:px-8 sm:py-14">
-          {[
-            ["6", "Stages, each with a visible output"],
-            ["4", "Service lines, one standard"],
-            ["1", "Named contact on every project"],
-            ["0", "Hidden costs. Changes quoted first"],
-          ].map(([stat, label]) => (
-            <div key={label} className="relative pl-4">
-              <span className="absolute left-0 top-1 h-10 w-px bg-gradient-to-b from-heat to-transparent" />
-              <dt className="font-display text-5xl font-bold tracking-tight text-ink sm:text-6xl">
-                {stat}
-              </dt>
-              <dd className="mt-2 text-sm leading-snug text-steel">{label}</dd>
-            </div>
-          ))}
-        </dl>
+      <section className="relative overflow-hidden border-y border-line bg-forge-plane">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px heat-bar opacity-80" />
+        <div className="pointer-events-none absolute -left-24 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-heat/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 top-0 h-48 w-48 rounded-full bg-brass/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <p className="text-center font-mono text-[11px] uppercase tracking-[0.2em] text-brass">
+            Built into every engagement
+          </p>
+          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 sm:gap-8">
+            {[
+              ["6", "Stages", "Each with a visible output"],
+              ["4", "Service lines", "One standard throughout"],
+              ["1", "Named contact", "On every project"],
+              ["0", "Hidden costs", "Changes quoted first"],
+            ].map(([stat, title, label]) => (
+              <div key={title} className="text-center">
+                <dt className="font-display text-5xl font-bold tracking-tight text-ink sm:text-6xl">
+                  <span className="bg-gradient-to-br from-ink via-ink to-heat bg-clip-text text-transparent">
+                    {stat}
+                  </span>
+                </dt>
+                <dd className="mt-3">
+                  <p className="text-sm font-semibold text-ink">{title}</p>
+                  <p className="mt-1 text-sm leading-snug text-steel">{label}</p>
+                </dd>
+                <div className="mx-auto mt-4 h-px w-10 bg-gradient-to-r from-transparent via-heat to-transparent" />
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
       {/* Marquee */}
       <section
-        className="overflow-hidden border-b border-line bg-forge py-4"
+        className="relative overflow-hidden border-b border-line bg-paper-elevated py-5"
         aria-hidden="true"
       >
-        <div className="marquee-track flex w-max gap-10 whitespace-nowrap font-mono text-xs uppercase tracking-[0.22em] text-steel">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-paper-elevated to-transparent sm:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-paper-elevated to-transparent sm:w-28" />
+        <div className="marquee-track flex w-max items-center gap-3 whitespace-nowrap px-4">
           {[...stack, ...stack].map((item, i) => (
-            <span key={`${item}-${i}`} className="flex items-center gap-10">
+            <span
+              key={`${item}-${i}`}
+              className="inline-flex items-center gap-3 rounded-full border border-line bg-panel px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft shadow-[0_1px_0_rgba(16,19,26,0.03)]"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-heat/80" />
               {item}
-              <span className="text-heat">/</span>
             </span>
           ))}
         </div>
@@ -248,14 +258,14 @@ export default function Home() {
               <Reveal
                 key={item.n}
                 delayMs={i * 70}
-                className="group relative overflow-hidden rounded-2xl border border-line bg-panel p-7 shadow-[0_10px_30px_rgba(20,22,28,0.04)] transition hover:border-heat/40 hover:shadow-[0_14px_36px_rgba(20,22,28,0.08)] sm:p-8"
+                className="surface-card group relative overflow-hidden rounded-2xl p-7 sm:p-8"
               >
-                <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-heat/0 transition group-hover:bg-heat/15" />
-                <p className="font-mono text-[11px] text-brass">{item.n}</p>
-                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-ink">
+                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-heat/0 blur-2xl transition duration-500 group-hover:bg-heat/20" />
+                <p className="relative font-mono text-[11px] text-brass">{item.n}</p>
+                <h3 className="relative mt-3 font-display text-2xl font-bold tracking-tight text-ink">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-steel">{item.body}</p>
+                <p className="relative mt-3 text-base leading-relaxed text-steel">{item.body}</p>
               </Reveal>
             ))}
           </div>
@@ -279,8 +289,8 @@ export default function Home() {
               </p>
             </Reveal>
 
-            <Reveal delayMs={120} className="panel-shadow overflow-hidden rounded-2xl border border-line bg-panel">
-              <div className="flex items-center gap-2 border-b border-line px-4 py-3 font-mono text-[11px] text-steel">
+            <Reveal delayMs={120} className="panel-shadow overflow-hidden rounded-2xl border border-line bg-panel/95 backdrop-blur-sm">
+              <div className="flex items-center gap-2 border-b border-line bg-mist/60 px-4 py-3 font-mono text-[11px] text-steel">
                 <span className="h-2.5 w-2.5 rounded-full bg-heat/90" />
                 <span className="h-2.5 w-2.5 rounded-full bg-brass/80" />
                 <span className="h-2.5 w-2.5 rounded-full bg-steel/40" />
@@ -328,7 +338,7 @@ launch(site).thenCare();`}</code>
               <Reveal
                 key={item.title}
                 delayMs={i * 35}
-                className="service-row rounded-xl border border-line bg-panel px-5 py-6 sm:px-6"
+                className="service-row rounded-xl border border-line bg-panel/90 px-5 py-6 shadow-[0_1px_0_rgba(16,19,26,0.03)] sm:px-6"
               >
                 <div className="grid items-baseline gap-3 sm:grid-cols-[7.5rem_1fr_1.15fr]">
                   <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-brass">
@@ -376,7 +386,7 @@ launch(site).thenCare();`}</code>
 
       {/* Free audit */}
       <section className="relative overflow-hidden border-y border-line bg-paper-elevated py-16 sm:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(239,85,32,0.16),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(228,74,22,0.14),transparent_55%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
@@ -391,12 +401,12 @@ launch(site).thenCare();`}</code>
             </p>
           </Reveal>
           <Reveal delayMs={80} className="flex flex-wrap gap-3">
-            <AuditTrigger className="btn-heat rounded-md px-5 py-3 text-sm font-semibold text-white">
+            <AuditTrigger className="btn-heat rounded-lg px-6 py-3 text-sm font-semibold text-white">
               Get my free audit
             </AuditTrigger>
             <Link
               href="/contact"
-              className="btn-ghost rounded-md px-5 py-3 text-sm font-semibold text-ink"
+              className="btn-ghost rounded-lg px-6 py-3 text-sm font-semibold text-ink"
             >
               Book a discovery call
             </Link>
@@ -420,7 +430,7 @@ launch(site).thenCare();`}</code>
               <Reveal
                 key={item.title}
                 delayMs={i * 80}
-                className="rounded-2xl border border-line bg-panel p-6 shadow-[0_10px_30px_rgba(20,22,28,0.04)]"
+                className="surface-card rounded-2xl p-6"
               >
                 <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-heat">
                   Problem
@@ -450,7 +460,7 @@ launch(site).thenCare();`}</code>
             {industries.map((item) => (
               <span
                 key={item}
-                className="rounded-md border border-line bg-panel px-3.5 py-2 text-sm text-ink-soft shadow-[0_1px_0_rgba(20,22,28,0.04)] transition hover:border-brass/40 hover:text-ink"
+                className="rounded-full border border-line bg-panel px-4 py-2 text-sm text-ink-soft shadow-[0_1px_0_rgba(16,19,26,0.03)] transition hover:border-heat/35 hover:text-ink"
               >
                 {item}
               </span>
@@ -470,7 +480,7 @@ launch(site).thenCare();`}</code>
               <Reveal
                 key={item.n}
                 delayMs={i * 60}
-                className="rounded-2xl border border-line bg-forge/60 p-6"
+                className="surface-card rounded-2xl bg-forge/40 p-6"
               >
                 <p className="font-mono text-[11px] text-brass">{item.n}</p>
                 <h3 className="mt-2 font-display text-2xl font-bold tracking-tight text-ink">
@@ -516,12 +526,12 @@ launch(site).thenCare();`}</code>
               We’ll tell you exactly how we’d approach it.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <AuditTrigger className="btn-heat rounded-md px-5 py-3.5 text-sm font-semibold text-white">
+              <AuditTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-white">
                 Get my free audit
               </AuditTrigger>
               <Link
                 href="/contact"
-                className="btn-ghost rounded-md px-5 py-3.5 text-sm font-semibold text-ink"
+                className="btn-ghost rounded-lg px-6 py-3.5 text-sm font-semibold text-ink"
               >
                 Start a project
               </Link>

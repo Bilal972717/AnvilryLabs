@@ -72,7 +72,7 @@ export function ProcessStages() {
 
   return (
     <div
-      className="overflow-hidden rounded-2xl border border-line bg-forge-mid"
+      className="panel-shadow relative overflow-hidden rounded-2xl border border-line bg-panel"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -82,36 +82,66 @@ export function ProcessStages() {
         }
       }}
     >
-      <div
-        role="tablist"
-        aria-label="Process stages"
-        className="flex gap-1 overflow-x-auto overscroll-x-contain border-b border-line p-2 sm:gap-0 sm:overflow-visible sm:p-0"
-      >
-        {stages.map((item, index) => {
-          const selected = index === active;
-          return (
-            <button
-              key={item.id}
-              type="button"
-              role="tab"
-              id={`${baseId}-tab-${item.id}`}
-              aria-selected={selected}
-              aria-controls={`${baseId}-panel`}
-              tabIndex={selected ? 0 : -1}
-              onClick={() => setActive(index)}
-              className={`min-w-[5.5rem] shrink-0 cursor-pointer rounded-lg px-2 py-2.5 text-left transition sm:min-w-0 sm:flex-1 sm:rounded-none sm:border-r sm:border-line sm:px-3 sm:py-4 last:sm:border-r-0 ${
-                selected
-                  ? "bg-heat text-white"
-                  : "text-ink-soft hover:bg-mist hover:text-ink"
-              }`}
-            >
-              <span className="font-mono text-[10px] uppercase tracking-[0.16em] opacity-80">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <span className="mt-1 block text-sm font-semibold">{item.label}</span>
-            </button>
-          );
-        })}
+      <div className="absolute inset-x-0 top-0 h-px heat-bar" />
+      <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-heat/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -left-10 h-44 w-44 rounded-full bg-brass/10 blur-3xl" />
+
+      <div className="relative border-b border-line px-4 py-4 sm:px-6 sm:py-5">
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-brass">
+            Six-stage forge path
+          </p>
+          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-steel">
+            {String(active + 1).padStart(2, "0")} / {String(stages.length).padStart(2, "0")}
+          </p>
+        </div>
+
+        <div
+          role="tablist"
+          aria-label="Process stages"
+          className="flex gap-2 overflow-x-auto overscroll-x-contain pb-1 sm:gap-2.5 sm:overflow-visible sm:pb-0"
+        >
+          {stages.map((item, index) => {
+            const selected = index === active;
+            const done = index < active;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                role="tab"
+                id={`${baseId}-tab-${item.id}`}
+                aria-selected={selected}
+                aria-controls={`${baseId}-panel`}
+                tabIndex={selected ? 0 : -1}
+                onClick={() => setActive(index)}
+                className={`group relative min-w-[4.75rem] flex-1 cursor-pointer rounded-xl border px-2.5 py-3 text-left transition sm:min-w-0 sm:px-3 ${
+                  selected
+                    ? "border-heat/40 bg-heat text-white shadow-[0_10px_28px_rgba(228,74,22,0.28)]"
+                    : done
+                      ? "border-brass/30 bg-brass/10 text-ink hover:border-brass/50"
+                      : "border-line bg-panel-muted text-ink-soft hover:border-heat/30 hover:bg-mist hover:text-ink"
+                }`}
+              >
+                <span
+                  className={`font-mono text-[10px] uppercase tracking-[0.16em] ${
+                    selected ? "text-white/80" : "text-brass"
+                  }`}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="mt-1 block text-sm font-semibold">{item.label}</span>
+                {selected && !reduceMotion ? (
+                  <span className="absolute inset-x-3 bottom-1.5 h-0.5 overflow-hidden rounded-full bg-white/25">
+                    <span
+                      key={stage.id}
+                      className="progress-fill block h-full rounded-full bg-white/90"
+                    />
+                  </span>
+                ) : null}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div
@@ -119,26 +149,31 @@ export function ProcessStages() {
         id={`${baseId}-panel`}
         aria-labelledby={`${baseId}-tab-${stage.id}`}
         aria-live={reduceMotion ? "polite" : "off"}
-        className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end"
+        className="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
       >
         <div key={stage.id} className={reduceMotion ? undefined : "animate-rise"}>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
-            Stage {String(active + 1).padStart(2, "0")} · {stage.label}
-          </p>
-          <h3 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-heat/25 bg-heat/10 px-3 py-1">
+            <span className="h-1.5 w-1.5 rounded-full bg-heat" />
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-heat">
+              Stage {String(active + 1).padStart(2, "0")} · {stage.label}
+            </p>
+          </div>
+          <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
             {stage.title}
           </h3>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-steel">
             {stage.body}
           </p>
         </div>
-        <ul className="grid gap-3 sm:grid-cols-2">
+
+        <ul className="grid gap-2.5 sm:grid-cols-2">
           {stage.proof.map((item) => (
             <li
               key={item}
-              className="border border-line bg-panel-muted px-4 py-3 text-sm text-ink-soft"
+              className="flex items-start gap-2.5 rounded-xl border border-line bg-mist/70 px-3.5 py-3 text-sm text-ink-soft"
             >
-              {item}
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-heat" />
+              <span>{item}</span>
             </li>
           ))}
         </ul>

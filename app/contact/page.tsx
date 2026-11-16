@@ -29,22 +29,22 @@ export default function ContactPage() {
       <div className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-heat/15 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-10 h-96 w-96 rounded-full bg-brass/10 blur-3xl" />
 
-      <section className="relative mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.95fr_1.15fr] lg:gap-14 lg:items-start">
-        <Reveal className="lg:sticky lg:top-36">
+      <section className="relative mx-auto max-w-6xl px-5 pb-10 pt-16 text-center sm:px-8 sm:pt-24">
+        <Reveal className="mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-line bg-panel-muted px-3 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_10px_rgba(239,85,32,0.9)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_10px_rgba(228,74,22,0.9)]" />
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-brass">
               Contact
             </p>
           </div>
 
-          <h1 className="mt-6 font-display text-5xl font-bold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-6 font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
             Start a{" "}
             <span className="bg-gradient-to-r from-ink via-brass to-heat bg-clip-text text-transparent">
               project.
             </span>
           </h1>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-steel">
+          <p className="mx-auto mt-5 max-w-md text-lg leading-relaxed text-steel">
             Tell us what you are building. We’ll tell you exactly how we’d
             approach it — usually within one working day.
           </p>
@@ -58,24 +58,26 @@ export default function ContactPage() {
             </span>
             hello@anvilrylabs.com
           </a>
-
-          <div className="mt-10 space-y-4">
-            {points.map((point) => (
-              <div
-                key={point.title}
-                className="rounded-xl border border-line bg-panel-muted p-4"
-              >
-                <p className="font-display text-lg font-semibold text-ink">
-                  {point.title}
-                </p>
-                <p className="mt-1 text-sm leading-relaxed text-steel">
-                  {point.body}
-                </p>
-              </div>
-            ))}
-          </div>
         </Reveal>
 
+        <Reveal delayMs={80} className="mx-auto mt-10 grid max-w-4xl gap-4 text-left sm:grid-cols-3">
+          {points.map((point) => (
+            <div
+              key={point.title}
+              className="rounded-xl border border-line bg-panel-muted p-4 text-center"
+            >
+              <p className="font-display text-lg font-semibold text-ink">
+                {point.title}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-steel">
+                {point.body}
+              </p>
+            </div>
+          ))}
+        </Reveal>
+      </section>
+
+      <section className="relative mx-auto max-w-2xl px-5 pb-20 sm:px-8 sm:pb-28">
         <Reveal
           delayMs={90}
           className="panel-shadow relative overflow-hidden rounded-2xl border border-line bg-panel"
@@ -92,7 +94,7 @@ export default function ContactPage() {
                 height={36}
                 className="rounded-md"
               />
-              <div>
+              <div className="text-left">
                 <p className="font-display text-sm font-semibold text-ink">
                   Anvilry Labs
                 </p>
@@ -106,7 +108,7 @@ export default function ContactPage() {
             </span>
           </div>
 
-          <div className="relative p-6 sm:p-8">
+          <div className="relative p-6 text-left sm:p-8">
             <ContactForm />
           </div>
         </Reveal>

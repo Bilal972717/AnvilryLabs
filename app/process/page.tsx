@@ -72,24 +72,24 @@ export default function ProcessPage() {
         <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-heat/20 blur-3xl" />
         <div className="pointer-events-none absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-brass/10 blur-3xl" />
 
-        <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-16 sm:px-8 sm:pb-20 sm:pt-24">
-          <Reveal>
+        <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-16 text-center sm:px-8 sm:pb-20 sm:pt-24">
+          <Reveal className="mx-auto max-w-3xl">
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-brass">
               Process
             </p>
-            <h1 className="mt-5 max-w-4xl font-display text-[clamp(2.75rem,8vw,5.5rem)] font-extrabold leading-[0.95] tracking-[-0.03em] text-ink">
+            <h1 className="mt-5 font-display text-[clamp(2.75rem,8vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-ink">
               Six stages.{" "}
               <span className="bg-gradient-to-r from-ink via-brass to-heat bg-clip-text text-transparent">
                 No surprises.
               </span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-steel sm:text-xl">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-steel sm:text-xl">
               The process is part of the brand. A working demo at every
               milestone — not a leap of faith.
             </p>
           </Reveal>
 
-          <Reveal delayMs={120} className="mt-12 sm:mt-14">
+          <Reveal delayMs={120} className="mx-auto mt-12 max-w-4xl text-left sm:mt-14">
             <ProcessStages />
           </Reveal>
         </div>

@@ -45,20 +45,20 @@ const signals = [
 export default function WorkPage() {
   return (
     <div className="bg-workshop">
-      <section className="mx-auto max-w-6xl px-5 pb-12 pt-16 sm:px-8 sm:pt-24">
-        <Reveal>
+      <section className="mx-auto max-w-6xl px-5 pb-12 pt-16 text-center sm:px-8 sm:pt-24">
+        <Reveal className="mx-auto max-w-3xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
             Work
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-extrabold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
             Proof over promises.
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-steel">
+          <p className="mx-auto mt-5 max-w-xl text-lg text-steel">
             Public case studies are in preparation. Until they ship, we share
             selected work on a call — same format every time: problem, approach,
             result, handover.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/contact"
               className="btn-heat inline-flex rounded-md px-5 py-3 text-sm font-semibold text-white"

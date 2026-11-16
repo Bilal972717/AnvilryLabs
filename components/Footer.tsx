@@ -10,8 +10,10 @@ const explore = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-forge text-ink">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
+    <footer className="relative overflow-hidden border-t border-line bg-forge text-ink">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px heat-bar opacity-50" />
+      <div className="pointer-events-none absolute -right-16 top-0 h-48 w-48 rounded-full bg-heat/10 blur-3xl" />
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">
             <AnvilMark className="h-9 w-9" />

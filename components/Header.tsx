@@ -96,7 +96,7 @@ export function Header() {
     <>
       <header
         ref={headerRef}
-        className="sticky top-0 z-40 border-b border-line bg-paper/80 backdrop-blur-xl"
+        className="sticky top-0 z-40 border-b border-line/80 bg-paper/75 backdrop-blur-2xl"
       >
         <button
           type="button"
@@ -122,9 +122,9 @@ export function Header() {
           >
             <AnvilMark
               priority
-              className="h-10 w-10 shadow-[0_0_24px_rgba(196,163,106,0.25)] transition-transform duration-500 group-hover:rotate-[-4deg]"
+              className="h-10 w-10 shadow-[0_0_28px_rgba(228,74,22,0.22)] transition-transform duration-500 group-hover:rotate-[-4deg]"
             />
-            <span className="font-display text-[1.1rem] font-semibold tracking-tight sm:text-lg">
+            <span className="font-display text-[1.15rem] font-semibold tracking-tight sm:text-lg">
               Anvilry Labs
             </span>
           </Link>

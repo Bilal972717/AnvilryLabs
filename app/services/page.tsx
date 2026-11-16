@@ -61,15 +61,15 @@ const lines = [
 export default function ServicesPage() {
   return (
     <div className="bg-workshop">
-      <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-8 sm:pt-24">
-        <Reveal>
+      <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 text-center sm:px-8 sm:pt-24">
+        <Reveal className="mx-auto max-w-3xl">
           <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
             Services
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-5xl font-extrabold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
             Built to last. Easy to find.
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-steel">
+          <p className="mx-auto mt-5 max-w-xl text-lg text-steel">
             We describe the work by the outcome, not only the technology.
           </p>
         </Reveal>
