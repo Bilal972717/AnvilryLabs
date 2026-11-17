@@ -3,83 +3,89 @@
 @import "shadcn/tailwind.css";
 
 :root {
-  /* Brand palette — Anvilry Labs V1.1 */
-  --forge-ink: #12151c;
-  --bone: #f4f1ea;
-  --matrix-lime: #a3e635;
-  --deep-steel: #232833;
-  --slate: #5a6170;
+  /* Brand palette — Anvilry Labs V1.2 */
+  --forge-navy: #101a2e;
+  --bone: #f6f2ea;
+  --forge-copper: #cf7f48;
+  --deep-steel: #1a2740;
+  --slate: #5e6a80;
+  --sand: #e2dacb;
+  --deep-copper: #9a5528;
 
   --paper: var(--bone);
   --paper-elevated: #fffcf7;
-  --ink: var(--forge-ink);
-  --ink-soft: #2a303c;
+  --ink: var(--forge-navy);
+  --ink-soft: #243352;
   --steel: var(--slate);
-  --line: rgba(18, 21, 28, 0.12);
-  --heat: var(--matrix-lime);
-  --heat-deep: #84cc16;
+  --line: color-mix(in srgb, var(--sand) 88%, var(--forge-navy));
+  --heat: var(--forge-copper);
+  --heat-deep: var(--deep-copper);
   --brass: var(--slate);
-  --forge: #ebe7df;
-  --forge-mid: #e3dfd6;
-  --mist: rgba(18, 21, 28, 0.045);
+  --forge: #ebe4d8;
+  --forge-mid: #e2dacb;
+  --mist: rgba(16, 26, 46, 0.045);
   --panel: #fffcf7;
-  --panel-muted: rgba(18, 21, 28, 0.04);
-  --overlay: rgba(18, 21, 28, 0.45);
+  --panel-muted: rgba(16, 26, 46, 0.04);
+  --overlay: rgba(16, 26, 46, 0.45);
   --site-header-h: 7.25rem;
-  --workshop-a: #f7f4ed;
-  --workshop-b: #f4f1ea;
-  --workshop-c: #ebe7df;
-  --forge-plane-a: #f0ece4;
-  --forge-plane-b: #e8e3da;
-  --forge-plane-c: #dfdad0;
-  --metal-a: #f2eee6;
-  --metal-b: #e8e3da;
-  --grid-line: rgba(18, 21, 28, 0.05);
-  --glow-heat: rgba(163, 230, 53, 0.12);
-  --glow-brass: rgba(90, 97, 112, 0.08);
-  --hero-vignette: rgba(18, 21, 28, 0.06);
+  --workshop-a: #f9f5ee;
+  --workshop-b: #f6f2ea;
+  --workshop-c: #ebe4d8;
+  --forge-plane-a: #f2ebe1;
+  --forge-plane-b: #eae2d5;
+  --forge-plane-c: #e2dacb;
+  --metal-a: #f4efe6;
+  --metal-b: #eae2d5;
+  --grid-line: rgba(16, 26, 46, 0.05);
+  --glow-heat: rgba(207, 127, 72, 0.12);
+  --glow-brass: rgba(94, 106, 128, 0.08);
+  --hero-vignette: rgba(16, 26, 46, 0.06);
   --surface-lift: rgba(255, 252, 247, 0.72);
-  --shadow-panel: 0 28px 70px rgba(18, 21, 28, 0.08);
-  --shadow-soft: 0 12px 40px rgba(18, 21, 28, 0.06);
+  --shadow-panel: 0 28px 70px rgba(16, 26, 46, 0.08);
+  --shadow-soft: 0 12px 40px rgba(16, 26, 46, 0.06);
   --background: var(--bone);
-  --foreground: var(--forge-ink);
+  --foreground: var(--forge-navy);
   --card: #fffcf7;
-  --card-foreground: var(--forge-ink);
+  --card-foreground: var(--forge-navy);
   --popover: #fffcf7;
-  --popover-foreground: var(--forge-ink);
-  --primary: var(--matrix-lime);
-  --primary-foreground: var(--forge-ink);
-  --secondary: #ebe7df;
-  --secondary-foreground: var(--forge-ink);
-  --muted: #ebe7df;
+  --popover-foreground: var(--forge-navy);
+  --primary: var(--forge-copper);
+  --primary-foreground: var(--forge-navy);
+  --secondary: #ebe4d8;
+  --secondary-foreground: var(--forge-navy);
+  --muted: #ebe4d8;
   --muted-foreground: var(--slate);
-  --accent: #eef6d4;
-  --accent-foreground: var(--forge-ink);
+  --accent: #f3e6d8;
+  --accent-foreground: var(--forge-navy);
   --destructive: oklch(0.55 0.2 25);
-  --border: rgba(18, 21, 28, 0.12);
-  --input: rgba(18, 21, 28, 0.14);
-  --ring: var(--matrix-lime);
-  --chart-1: var(--matrix-lime);
+  --border: color-mix(in srgb, var(--sand) 85%, var(--forge-navy));
+  --input: rgba(16, 26, 46, 0.14);
+  --ring: var(--forge-copper);
+  --chart-1: var(--forge-copper);
   --chart-2: var(--slate);
   --chart-3: var(--deep-steel);
-  --chart-4: #2a303c;
-  --chart-5: #ebe7df;
+  --chart-4: #243352;
+  --chart-5: #ebe4d8;
   --radius: 0.75rem;
   --sidebar: #fffcf7;
-  --sidebar-foreground: var(--forge-ink);
-  --sidebar-primary: var(--matrix-lime);
-  --sidebar-primary-foreground: var(--forge-ink);
-  --sidebar-accent: #ebe7df;
-  --sidebar-accent-foreground: var(--forge-ink);
-  --sidebar-border: rgba(18, 21, 28, 0.1);
-  --sidebar-ring: var(--matrix-lime);
+  --sidebar-foreground: var(--forge-navy);
+  --sidebar-primary: var(--forge-copper);
+  --sidebar-primary-foreground: var(--forge-navy);
+  --sidebar-accent: #ebe4d8;
+  --sidebar-accent-foreground: var(--forge-navy);
+  --sidebar-border: rgba(16, 26, 46, 0.1);
+  --sidebar-ring: var(--forge-copper);
 }
 
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-elevated: var(--paper-elevated);
-  --color-bone: #f4f1ea;
-  --color-deep-steel: #232833;
+  --color-bone: #f6f2ea;
+  --color-deep-steel: #1a2740;
+  --color-forge-navy: #101a2e;
+  --color-forge-copper: #cf7f48;
+  --color-deep-copper: #9a5528;
+  --color-sand: #e2dacb;
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-steel: var(--steel);
@@ -154,8 +160,8 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--matrix-lime) 45%, transparent);
-  color: var(--forge-ink);
+  background: color-mix(in srgb, var(--forge-copper) 40%, transparent);
+  color: var(--forge-navy);
 }
 
 .font-display {
@@ -213,10 +219,10 @@ body {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(163, 230, 53, 0.2) 18%,
-    rgba(163, 230, 53, 0.95) 50%,
-    rgba(90, 97, 112, 0.45) 66%,
-    rgba(163, 230, 53, 0.2) 82%,
+    rgba(207, 127, 72, 0.2) 18%,
+    rgba(207, 127, 72, 0.95) 50%,
+    rgba(94, 106, 128, 0.45) 66%,
+    rgba(207, 127, 72, 0.2) 82%,
     transparent 100%
   );
   background-size: 220% 100%;
@@ -226,7 +232,7 @@ body {
 .ember {
   position: absolute;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(163, 230, 53, 0.95), transparent 70%);
+  background: radial-gradient(circle, rgba(207, 127, 72, 0.95), transparent 70%);
   filter: blur(1px);
   animation: ember-float 9s ease-in-out infinite;
 }
@@ -366,9 +372,9 @@ body {
 }
 
 .service-row:hover {
-  background: linear-gradient(90deg, rgba(163, 230, 53, 0.12), transparent 55%);
+  background: linear-gradient(90deg, rgba(207, 127, 72, 0.1), transparent 55%);
   padding-left: 0.75rem;
-  border-color: rgba(163, 230, 53, 0.4);
+  border-color: rgba(207, 127, 72, 0.4);
   box-shadow: var(--shadow-soft);
 }
 
@@ -383,18 +389,18 @@ body {
 }
 
 .surface-card:hover {
-  border-color: color-mix(in srgb, var(--matrix-lime) 45%, var(--line));
+  border-color: color-mix(in srgb, var(--forge-copper) 45%, var(--line));
   box-shadow: var(--shadow-panel);
   transform: translateY(-2px);
 }
 
 .btn-heat {
   cursor: pointer;
-  color: var(--forge-ink);
-  background: linear-gradient(180deg, #b6f04a 0%, var(--matrix-lime) 55%, var(--heat-deep) 100%);
+  color: var(--forge-navy);
+  background: linear-gradient(180deg, #d9925c 0%, var(--forge-copper) 55%, #b86a35 100%);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.28) inset,
-    0 10px 28px rgba(163, 230, 53, 0.32);
+    0 0 0 1px rgba(255, 252, 247, 0.22) inset,
+    0 10px 28px rgba(207, 127, 72, 0.28);
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
@@ -402,16 +408,16 @@ body {
 }
 
 .btn-heat:hover {
-  filter: brightness(1.03);
+  filter: brightness(1.04);
   transform: translateY(-1px);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.35) inset,
-    0 14px 34px rgba(163, 230, 53, 0.4);
+    0 0 0 1px rgba(255, 252, 247, 0.3) inset,
+    0 14px 34px rgba(207, 127, 72, 0.36);
 }
 
 .btn-heat:focus-visible,
 .btn-ghost:focus-visible {
-  outline: 2px solid var(--matrix-lime);
+  outline: 2px solid var(--forge-copper);
   outline-offset: 2px;
 }
 
@@ -429,7 +435,7 @@ body {
 
 .btn-ghost:hover {
   background: #fffcf7;
-  border-color: color-mix(in srgb, var(--forge-ink) 22%, transparent);
+  border-color: color-mix(in srgb, var(--forge-navy) 22%, transparent);
   box-shadow: var(--shadow-soft);
   transform: translateY(-1px);
 }

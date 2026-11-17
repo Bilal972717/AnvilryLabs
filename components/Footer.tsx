@@ -10,22 +10,22 @@ const explore = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-line bg-[#232833] text-[#f4f1ea]">
+    <footer className="relative overflow-hidden border-t border-line bg-[#101a2e] text-[#f6f2ea]">
       <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">
             <AnvilMark className="h-9 w-9" />
-            <span className="font-display text-lg font-medium tracking-tight text-[#f4f1ea]">
+            <span className="font-display text-lg font-medium tracking-tight text-[#f6f2ea]">
               Anvilry Labs
             </span>
           </div>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#f4f1ea]/70">
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#f6f2ea]/70">
             Software, properly forged. Websites, apps and custom software built
             to hold up — then made easy to find.
           </p>
         </div>
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#a3e635]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#cf7f48]">
             Explore
           </p>
           <ul className="mt-4 space-y-2.5">
@@ -33,7 +33,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-[#f4f1ea]/75 transition hover:text-[#f4f1ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3e635]"
+                  className="text-sm text-[#f6f2ea]/75 transition hover:text-[#f6f2ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#cf7f48]"
                 >
                   {link.label}
                 </Link>
@@ -42,14 +42,14 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#a3e635]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#cf7f48]">
             Connect
           </p>
           <ul className="mt-4 space-y-2.5">
             <li>
               <Link
                 href="/contact"
-                className="text-sm text-[#f4f1ea]/75 transition hover:text-[#f4f1ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3e635]"
+                className="text-sm text-[#f6f2ea]/75 transition hover:text-[#f6f2ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#cf7f48]"
               >
                 Contact
               </Link>
@@ -57,7 +57,7 @@ export function Footer() {
             <li>
               <a
                 href="mailto:hello@anvilrylabs.com"
-                className="text-sm text-[#f4f1ea]/75 transition hover:text-[#f4f1ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3e635]"
+                className="text-sm text-[#f6f2ea]/75 transition hover:text-[#f6f2ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#cf7f48]"
               >
                 hello@anvilrylabs.com
               </a>
@@ -66,7 +66,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 pr-36 text-xs text-[#f4f1ea]/55 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pr-40">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 pr-36 text-xs text-[#f6f2ea]/55 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pr-40">
           <p>© 2026 Anvilry Labs · anvilrylabs.com</p>
           <p className="font-mono tracking-[0.08em]">Software, properly forged.</p>
         </div>

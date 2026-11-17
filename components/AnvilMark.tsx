@@ -24,21 +24,21 @@ export function AnvilMark({
         width="64"
         height="64"
         rx="12"
-        fill={isLight ? "#F4F1EA" : "#12151C"}
-        stroke={isLight ? "#12151C" : "none"}
+        fill={isLight ? "#F6F2EA" : "#101A2E"}
+        stroke={isLight ? "#101A2E" : "none"}
         strokeWidth={isLight ? 1.5 : 0}
       />
       <path
         d="M32 10 L50 52 H42.6 L39.2 42.8 H24.8 L21.4 52 H14 L32 10Z"
-        fill={isLight ? "#12151C" : "#F4F1EA"}
+        fill={isLight ? "#101A2E" : "#F6F2EA"}
       />
       <path
         d="M32 18.5 L41.2 42.8 H22.8 L32 18.5Z"
-        fill={isLight ? "#F4F1EA" : "#12151C"}
+        fill={isLight ? "#F6F2EA" : "#101A2E"}
       />
-      <path d="M18 30 H46" stroke="#A3E635" strokeWidth="3.2" strokeLinecap="square" />
-      <path d="M20.5 36.5 H43.5" stroke="#A3E635" strokeWidth="2.2" strokeLinecap="square" />
-      <path d="M23 43 H41" stroke="#A3E635" strokeWidth="2.2" strokeLinecap="square" />
+      <path d="M18 30 H46" stroke="#CF7F48" strokeWidth="3.2" strokeLinecap="square" />
+      <path d="M20.5 36.5 H43.5" stroke="#CF7F48" strokeWidth="2.2" strokeLinecap="square" />
+      <path d="M23 43 H41" stroke="#CF7F48" strokeWidth="2.2" strokeLinecap="square" />
     </svg>
   );
 }

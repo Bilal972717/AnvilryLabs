@@ -177,10 +177,10 @@ export default function Home() {
       </section>
 
       {/* Commitments + stack */}
-      <section className="relative overflow-hidden border-y border-line bg-[#232833] text-[#f4f1ea]">
+      <section className="relative overflow-hidden border-y border-line bg-[#101a2e] text-[#f6f2ea]">
         <div className="heat-bar absolute inset-x-0 top-0 h-px" />
         <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
-          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#a3e635]">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#cf7f48]">
             Built into every engagement
           </p>
 
@@ -195,12 +195,12 @@ export default function Home() {
                 key={title}
                 className={`sm:px-6 ${i > 0 ? "sm:border-l sm:border-white/10" : "sm:pl-0"}`}
               >
-                <dt className="font-display text-5xl font-medium tracking-tight text-[#f4f1ea] sm:text-6xl">
+                <dt className="font-display text-5xl font-medium tracking-tight text-[#f6f2ea] sm:text-6xl">
                   {stat}
                 </dt>
                 <dd className="mt-3">
-                  <p className="text-sm font-semibold text-[#f4f1ea]">{title}</p>
-                  <p className="mt-1 text-sm leading-snug text-[#f4f1ea]/60">
+                  <p className="text-sm font-semibold text-[#f6f2ea]">{title}</p>
+                  <p className="mt-1 text-sm leading-snug text-[#f6f2ea]/60">
                     {label}
                   </p>
                 </dd>
@@ -213,16 +213,16 @@ export default function Home() {
           className="relative overflow-hidden border-t border-white/10 py-4"
           aria-hidden="true"
         >
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#232833] to-transparent sm:w-24" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#232833] to-transparent sm:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#101a2e] to-transparent sm:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#101a2e] to-transparent sm:w-24" />
           <div className="marquee-track flex w-max items-center gap-8 whitespace-nowrap px-6">
             {[...stack, ...stack].map((item, i) => (
               <span
                 key={`${item}-${i}`}
-                className="inline-flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.08em] text-[#f4f1ea]/55"
+                className="inline-flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.08em] text-[#f6f2ea]/55"
               >
                 {item}
-                <span className="h-1 w-1 rounded-full bg-[#a3e635]/70" />
+                <span className="h-1 w-1 rounded-full bg-[#cf7f48]/70" />
               </span>
             ))}
           </div>
@@ -281,14 +281,14 @@ export default function Home() {
               </p>
             </Reveal>
 
-            <Reveal delayMs={120} className="panel-shadow overflow-hidden rounded-2xl border border-line bg-[#232833]">
-              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 font-mono text-[11px] text-[#f4f1ea]/60">
+            <Reveal delayMs={120} className="panel-shadow overflow-hidden rounded-2xl border border-line bg-[#1a2740]">
+              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 font-mono text-[11px] text-[#f6f2ea]/60">
                 <span className="h-2.5 w-2.5 rounded-full bg-heat" />
-                <span className="h-2.5 w-2.5 rounded-full bg-[#f4f1ea]/35" />
-                <span className="h-2.5 w-2.5 rounded-full bg-[#f4f1ea]/20" />
-                <span className="ml-2 text-[#f4f1ea]/70">build.ts</span>
+                <span className="h-2.5 w-2.5 rounded-full bg-[#f6f2ea]/35" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#f6f2ea]/20" />
+                <span className="ml-2 text-[#f6f2ea]/70">build.ts</span>
               </div>
-              <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7 text-[#f4f1ea]/85 sm:p-8 sm:text-sm">
+              <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7 text-[#f6f2ea]/85 sm:p-8 sm:text-sm">
                 <code>{`const brief = await listen();
 const plan = blueprint(brief);
 const site = forge(plan, { demo: true });
@@ -378,7 +378,7 @@ launch(site).thenCare();`}</code>
 
       {/* Free audit */}
       <section className="relative overflow-hidden border-y border-line bg-paper-elevated py-16 sm:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(163,230,53,0.14),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(207,127,72,0.14),transparent_55%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">

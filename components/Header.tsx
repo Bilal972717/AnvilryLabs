@@ -101,12 +101,12 @@ export function Header() {
         <button
           type="button"
           onClick={openAudit}
-          className="group flex w-full cursor-pointer items-center justify-center gap-2 border-b border-line bg-ink px-4 py-2.5 text-center text-bone transition hover:bg-[#1a1e28] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-heat"
+          className="group flex w-full cursor-pointer items-center justify-center gap-2 border-b border-line bg-[#101a2e] px-4 py-2.5 text-center text-[#f6f2ea] transition hover:bg-[#1a2740] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-heat"
         >
-          <span className="text-[12px] font-medium text-paper/85 sm:text-[13px]">
+          <span className="text-[12px] font-medium text-[#f6f2ea]/85 sm:text-[13px]">
             Free website and SEO audit for new enquiries.
           </span>
-          <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-heat transition group-hover:text-[#b6f04a] sm:text-[13px]">
+          <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#cf7f48] transition group-hover:text-[#d9925c] sm:text-[13px]">
             Claim yours
             <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
               →

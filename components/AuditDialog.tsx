@@ -145,7 +145,7 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
                       key={item}
                       className="flex items-start gap-2.5 text-[13px] text-ink-soft sm:text-sm"
                     >
-                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-heat/15 text-[11px] text-heat">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-heat/15 text-[11px] text-heat-deep">
                         ✓
                       </span>
                       {item}

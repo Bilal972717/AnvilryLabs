@@ -139,7 +139,7 @@ export default function ProcessPage() {
                         key={mark}
                         className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft"
                       >
-                        <span className="text-heat" aria-hidden="true">
+                        <span className="text-heat-deep" aria-hidden="true">
                           ▸
                         </span>
                         {mark}
@@ -165,7 +165,7 @@ export default function ProcessPage() {
 
       {/* Commitments */}
       <section className="relative overflow-hidden border-y border-line bg-forge py-20 text-ink sm:py-28">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_0%,rgba(163,230,53,0.18),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_0%,rgba(207,127,72,0.18),transparent_55%)]" />
         <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
             <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
@@ -181,7 +181,7 @@ export default function ProcessPage() {
               <Reveal key={item} delayMs={i * 40}>
                 <li className="flex gap-4 border-t border-line py-5">
                   <span
-                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-heat/5 text-xs text-heat"
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-heat/5 text-xs text-heat-deep"
                     aria-hidden="true"
                   >
                     ✓

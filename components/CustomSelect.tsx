@@ -227,7 +227,7 @@ export function CustomSelect({
                     {selected ? (
                       <svg
                         viewBox="0 0 16 16"
-                        className="h-3.5 w-3.5 text-heat"
+                        className="h-3.5 w-3.5 text-heat-deep"
                         fill="none"
                         aria-hidden="true"
                       >

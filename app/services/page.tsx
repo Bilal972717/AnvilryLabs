@@ -78,7 +78,7 @@ export default function ServicesPage() {
       <section className="mx-auto max-w-6xl space-y-16 px-5 pb-24 sm:px-8">
         {lines.map((line, i) => (
           <Reveal key={line.n} delayMs={i * 40} className="border-t border-line pt-10">
-            <p className="font-mono text-[11px] text-heat">{line.n}</p>
+            <p className="font-mono text-[11px] text-heat-deep">{line.n}</p>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
               {line.title}
             </h2>

@@ -32,7 +32,7 @@ export default function ContactPage() {
       <section className="relative mx-auto max-w-6xl px-5 pb-10 pt-16 text-center sm:px-8 sm:pt-24">
         <Reveal className="mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-line bg-panel-muted px-3 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_10px_rgba(163,230,53,0.9)]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_10px_rgba(207,127,72,0.9)]" />
             <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-brass">
               Contact
             </p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
             href="mailto:hello@anvilrylabs.com"
             className="mt-7 inline-flex items-center gap-3 rounded-lg border border-line bg-panel-muted px-4 py-3 font-mono text-sm text-ink transition hover:border-brass/40 hover:bg-mist"
           >
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-heat/5 text-[11px] font-semibold text-heat">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-heat/5 text-[11px] font-semibold text-heat-deep">
               @
             </span>
             hello@anvilrylabs.com

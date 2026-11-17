@@ -53,6 +53,7 @@ export function ProcessStages() {
   const [reduceMotion, setReduceMotion] = useState(false);
   const baseId = useId();
   const stage = stages[active]!;
+  const progress = ((active + 1) / stages.length) * 100;
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -72,7 +73,7 @@ export function ProcessStages() {
 
   return (
     <div
-      className="panel-shadow relative overflow-hidden rounded-2xl border border-line bg-panel"
+      className="relative overflow-hidden rounded-2xl border border-line bg-[#101a2e] text-[#f6f2ea]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
@@ -82,61 +83,80 @@ export function ProcessStages() {
         }
       }}
     >
-      <div className="relative border-b border-line px-4 py-4 sm:px-6 sm:py-5">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
-            Six-stage forge path
-          </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
+      <div className="heat-bar absolute inset-x-0 top-0 h-px" />
+
+      <div className="relative border-b border-white/10 px-5 py-5 sm:px-8 sm:py-6">
+        <div className="mb-6 flex items-end justify-between gap-3">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-[#cf7f48]">
+              Six-stage forge path
+            </p>
+            <p className="mt-1 text-sm text-[#f6f2ea]/55">
+              A working demo at every milestone.
+            </p>
+          </div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#f6f2ea]/50">
             {String(active + 1).padStart(2, "0")} / {String(stages.length).padStart(2, "0")}
           </p>
         </div>
 
-        <div
-          role="tablist"
-          aria-label="Process stages"
-          className="flex gap-2 overflow-x-auto overscroll-x-contain pb-1 sm:gap-2.5 sm:overflow-visible sm:pb-0"
-        >
-          {stages.map((item, index) => {
-            const selected = index === active;
-            const done = index < active;
-            return (
-              <button
-                key={item.id}
-                type="button"
-                role="tab"
-                id={`${baseId}-tab-${item.id}`}
-                aria-selected={selected}
-                aria-controls={`${baseId}-panel`}
-                tabIndex={selected ? 0 : -1}
-                onClick={() => setActive(index)}
-                className={`group relative min-w-[4.75rem] flex-1 cursor-pointer rounded-xl border px-2.5 py-3 text-left transition sm:min-w-0 sm:px-3 ${
-                  selected
-                    ? "border-heat/50 bg-heat text-ink shadow-[0_10px_28px_rgba(163,230,53,0.28)]"
-                    : done
-                      ? "border-brass/30 bg-brass/10 text-ink hover:border-brass/50"
-                      : "border-line bg-panel-muted text-ink-soft hover:border-heat/30 hover:bg-mist hover:text-ink"
-                }`}
-              >
-                <span
-                  className={`font-mono text-[10px] uppercase tracking-[0.08em] ${
-                    selected ? "text-ink/70" : "text-brass"
-                  }`}
+        <div className="relative">
+          <div className="absolute left-0 right-0 top-[0.95rem] hidden h-px bg-white/10 sm:block" />
+          <div
+            className="absolute left-0 top-[0.95rem] hidden h-px bg-[#cf7f48]/70 transition-[width] duration-500 ease-out sm:block"
+            style={{ width: `${(active / (stages.length - 1)) * 100}%` }}
+          />
+
+          <div
+            role="tablist"
+            aria-label="Process stages"
+            className="relative flex gap-2 overflow-x-auto overscroll-x-contain pb-1 sm:grid sm:grid-cols-6 sm:gap-3 sm:overflow-visible sm:pb-0"
+          >
+            {stages.map((item, index) => {
+              const selected = index === active;
+              const done = index < active;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  role="tab"
+                  id={`${baseId}-tab-${item.id}`}
+                  aria-selected={selected}
+                  aria-controls={`${baseId}-panel`}
+                  tabIndex={selected ? 0 : -1}
+                  onClick={() => setActive(index)}
+                  className="group relative flex min-w-[4.5rem] flex-col items-start gap-2.5 text-left sm:min-w-0"
                 >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="mt-1 block text-sm font-semibold">{item.label}</span>
-                {selected && !reduceMotion ? (
-                  <span className="absolute inset-x-3 bottom-1.5 h-0.5 overflow-hidden rounded-full bg-ink/15">
-                    <span
-                      key={stage.id}
-                      className="progress-fill block h-full rounded-full bg-ink/70"
-                    />
+                  <span
+                    className={`relative z-[1] flex h-8 w-8 items-center justify-center rounded-md border font-mono text-[11px] transition ${
+                      selected
+                        ? "border-[#cf7f48] bg-[#cf7f48] text-[#101a2e]"
+                        : done
+                          ? "border-[#cf7f48]/50 bg-[#1a2740] text-[#cf7f48]"
+                          : "border-white/15 bg-[#1a2740] text-[#f6f2ea]/55 group-hover:border-[#cf7f48]/40 group-hover:text-[#f6f2ea]"
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, "0")}
                   </span>
-                ) : null}
-              </button>
-            );
-          })}
+                  <span
+                    className={`text-sm font-medium transition ${
+                      selected ? "text-[#f6f2ea]" : "text-[#f6f2ea]/45 group-hover:text-[#f6f2ea]/75"
+                    }`}
+                  >
+                    {item.label}
+                  </span>
+                  {selected && !reduceMotion ? (
+                    <span className="absolute inset-x-0 -bottom-1 h-0.5 overflow-hidden rounded-full bg-white/10 sm:left-0 sm:right-auto sm:w-8">
+                      <span
+                        key={stage.id}
+                        className="progress-fill block h-full rounded-full bg-[#cf7f48]"
+                      />
+                    </span>
+                  ) : null}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -145,34 +165,43 @@ export function ProcessStages() {
         id={`${baseId}-panel`}
         aria-labelledby={`${baseId}-tab-${stage.id}`}
         aria-live={reduceMotion ? "polite" : "off"}
-        className="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
+        className="relative grid gap-10 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-14"
       >
-        <div key={stage.id} className={reduceMotion ? undefined : "animate-rise"}>
-          <div className="inline-flex items-center gap-2 rounded-full border border-heat/25 bg-heat/5 px-3 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-heat" />
-            <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-heat">
-              Stage {String(active + 1).padStart(2, "0")} · {stage.label}
-            </p>
-          </div>
-          <h3 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        <div key={`${stage.id}-copy`} className={reduceMotion ? undefined : "animate-rise"}>
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#cf7f48]">
+            Stage {String(active + 1).padStart(2, "0")} · {stage.label}
+          </p>
+          <h3 className="mt-4 font-display text-3xl font-medium tracking-tight text-[#f6f2ea] sm:text-4xl">
             {stage.title}
           </h3>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-steel">
+          <p className="mt-4 max-w-xl text-base leading-relaxed text-[#f6f2ea]/65">
             {stage.body}
           </p>
         </div>
 
-        <ul className="grid gap-2.5 sm:grid-cols-2">
-          {stage.proof.map((item) => (
+        <ul
+          key={`${stage.id}-proof`}
+          className={`space-y-0 border-t border-white/10 ${reduceMotion ? "" : "animate-rise-delay-1"}`}
+        >
+          {stage.proof.map((item, i) => (
             <li
               key={item}
-              className="flex items-start gap-2.5 rounded-xl border border-line bg-mist/70 px-3.5 py-3 text-sm text-ink-soft"
+              className="flex items-baseline gap-4 border-b border-white/10 py-3.5 text-sm text-[#f6f2ea]/80"
             >
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-heat" />
+              <span className="font-mono text-[10px] uppercase tracking-[0.08em] text-[#cf7f48]/80">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="h-1 w-full bg-white/5" aria-hidden="true">
+        <div
+          className="h-full bg-[#cf7f48]/80 transition-[width] duration-500 ease-out"
+          style={{ width: `${progress}%` }}
+        />
       </div>
     </div>
   );
