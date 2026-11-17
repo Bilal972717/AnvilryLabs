@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState, type FormEvent } from "react";
+import { AnvilMark } from "@/components/AnvilMark";
 import { CustomSelect } from "@/components/CustomSelect";
 import {
   Dialog,
@@ -102,20 +102,13 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
           "top-auto bottom-0 left-1/2 translate-x-[-50%] translate-y-0 sm:top-1/2 sm:bottom-auto sm:max-h-[min(90vh,880px)] sm:max-w-3xl sm:translate-y-[-50%] sm:rounded-2xl",
         )}
       >
-        <div className="absolute inset-x-0 top-0 z-20 h-px heat-bar" />
-        <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-heat/20 blur-3xl" />
+        <div className="absolute inset-x-0 top-0 z-20 h-px bg-line" />
 
         <header className="relative z-10 flex shrink-0 items-center justify-between gap-3 border-b border-line bg-panel px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt=""
-              width={40}
-              height={40}
-              className="h-9 w-9 shrink-0 rounded-md sm:h-10 sm:w-10"
-            />
+            <AnvilMark className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" />
             <div className="min-w-0">
-              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-heat">
+              <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
                 Free audit
               </p>
               <p className="truncate font-display text-sm font-semibold text-ink">
@@ -165,7 +158,7 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
             <section className="px-4 py-5 sm:px-8 sm:py-7">
               {draft ? (
                 <div className="flex min-h-44 flex-col">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
                     Prepared message
                   </p>
                   <pre className="mt-3 max-h-40 overflow-auto rounded-lg border border-line bg-panel-muted p-3 text-xs leading-relaxed text-ink-soft whitespace-pre-wrap">
@@ -174,7 +167,7 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
                   <div className="mt-5 space-y-2.5">
                     <a
                       href={draft.mailto}
-                      className="btn-heat inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold text-white"
+                      className="btn-heat inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-semibold text-ink"
                     >
                       Open mail app again
                     </a>
@@ -196,7 +189,7 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
                   onSubmit={handleSubmit}
                 >
                   <div>
-                    <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
                       Request details
                     </p>
                     <p className="mt-1 text-sm text-steel">
@@ -241,7 +234,7 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
                   />
                   <button
                     type="submit"
-                    className="btn-heat mt-1 w-full rounded-lg px-4 py-3.5 text-sm font-semibold text-white"
+                    className="btn-heat mt-1 w-full rounded-lg px-4 py-3.5 text-sm font-semibold text-ink"
                   >
                     Send my request
                   </button>

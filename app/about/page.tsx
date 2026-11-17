@@ -35,10 +35,10 @@ export default function AboutPage() {
     <div className="bg-workshop">
       <section className="mx-auto max-w-6xl px-5 pb-12 pt-16 text-center sm:px-8 sm:pt-24">
         <Reveal className="mx-auto max-w-3xl">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
             About
           </p>
-          <h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-4 font-display text-5xl font-medium tracking-tight text-ink sm:text-6xl">
             Raw material, shaped properly.
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-steel">
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-6xl px-5 pb-20 sm:px-8">
         <Reveal>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
             The name
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -70,7 +70,7 @@ export default function AboutPage() {
       <section className="bg-forge-plane py-20 text-ink">
         <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 md:grid-cols-2">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Mission
             </p>
             <p className="mt-4 font-display text-2xl font-semibold leading-snug tracking-tight text-ink">
@@ -79,7 +79,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
           <Reveal delayMs={80}>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Vision
             </p>
             <p className="mt-4 font-display text-2xl font-semibold leading-snug tracking-tight text-ink">
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
         <Reveal>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
             Principles
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink">
@@ -110,7 +110,7 @@ export default function AboutPage() {
         <Reveal className="mt-12">
           <Link
             href="/contact"
-            className="btn-heat inline-flex rounded-md px-5 py-3 text-sm font-semibold text-white"
+            className="btn-heat inline-flex rounded-md px-5 py-3 text-sm font-semibold text-ink"
           >
             Talk to us
           </Link>

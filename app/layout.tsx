@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, IBM_Plex_Mono, Jost } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import { AuditProvider } from "@/components/AuditProvider";
 import { FixedAuditButton } from "@/components/FixedAuditButton";
 import { Footer } from "@/components/Footer";
@@ -10,17 +10,17 @@ import "./globals.css";
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
-const jost = Jost({
-  variable: "--font-jost",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: "--font-ibm-plex-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
   weight: ["400", "500"],
 });
@@ -36,6 +36,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
+      { url: "/mark.svg", type: "image/svg+xml" },
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
@@ -66,14 +67,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn(
         "h-full antialiased",
         fraunces.variable,
-        jost.variable,
-        ibmPlexMono.variable,
+        inter.variable,
+        jetbrainsMono.variable,
       )}
     >
       <body className="flex min-h-full flex-col bg-paper font-sans text-ink">
         <a
           href="#main"
-          className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-md bg-heat px-4 py-2 text-sm font-semibold text-white transition focus:translate-y-0"
+          className="absolute left-4 top-4 z-[100] -translate-y-[200%] rounded-md bg-heat px-4 py-2 text-sm font-semibold text-ink transition focus:translate-y-0"
         >
           Skip to content
         </a>

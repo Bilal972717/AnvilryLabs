@@ -12,7 +12,7 @@ export function FixedAuditButton() {
       <button
         type="button"
         onClick={openAudit}
-        className="pointer-events-auto inline-flex items-center gap-2.5 rounded-lg border border-line bg-panel/95 px-4 py-2.5 text-sm font-semibold text-ink shadow-[0_10px_30px_rgba(16,19,26,0.1)] backdrop-blur-md transition hover:border-heat/45 hover:text-heat focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
+        className="pointer-events-auto inline-flex items-center gap-2.5 rounded-lg border border-line bg-panel/95 px-4 py-2.5 text-sm font-semibold text-ink shadow-[0_10px_30px_rgba(18,21,28,0.1)] backdrop-blur-md transition hover:border-heat/50 hover:bg-heat/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
         aria-label="Open free audit"
       >
         <span className="h-1.5 w-1.5 rounded-full bg-heat" aria-hidden="true" />

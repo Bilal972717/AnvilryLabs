@@ -59,7 +59,7 @@ export function ContactForm() {
   if (draft) {
     return (
       <div className="flex min-h-72 flex-col justify-center px-1 py-4">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">
+        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
           Next step
         </p>
         <h2 className="mt-3 font-display text-3xl font-bold text-ink">
@@ -79,7 +79,7 @@ export function ContactForm() {
           {`To: hello@anvilrylabs.com\nSubject: ${draft.subject}\n\n${draft.body}`}
         </pre>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href={draft.mailto} className="btn-heat rounded-lg px-4 py-3 text-sm font-semibold text-white">
+          <a href={draft.mailto} className="btn-heat rounded-lg px-4 py-3 text-sm font-semibold text-ink">
             Open mail app again
           </a>
           <button
@@ -104,7 +104,7 @@ export function ContactForm() {
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
       <div className="border-b border-line pb-5">
-        <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">
+        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
           Project enquiry
         </p>
         <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink">
@@ -156,7 +156,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="btn-heat w-full rounded-lg px-4 py-3.5 text-sm font-semibold text-white"
+        className="btn-heat w-full rounded-lg px-4 py-3.5 text-sm font-semibold text-ink"
       >
         Send enquiry
       </button>

@@ -101,12 +101,12 @@ export function Header() {
         <button
           type="button"
           onClick={openAudit}
-          className="group flex w-full cursor-pointer items-center justify-center gap-2 border-b border-line bg-gradient-to-r from-heat-deep via-heat to-heat-deep px-4 py-2.5 text-center text-white transition hover:from-heat hover:via-[#ff6a33] hover:to-heat focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brass"
+          className="group flex w-full cursor-pointer items-center justify-center gap-2 border-b border-line bg-ink px-4 py-2.5 text-center text-bone transition hover:bg-[#1a1e28] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-heat"
         >
-          <span className="text-[12px] font-medium text-white/90 sm:text-[13px]">
+          <span className="text-[12px] font-medium text-paper/85 sm:text-[13px]">
             Free website and SEO audit for new enquiries.
           </span>
-          <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-white transition group-hover:text-white sm:text-[13px]">
+          <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-heat transition group-hover:text-[#b6f04a] sm:text-[13px]">
             Claim yours
             <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
               →
@@ -120,10 +120,7 @@ export function Header() {
             className="group flex items-center gap-2.5 rounded-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
             onClick={() => setMenuOpen(false)}
           >
-            <AnvilMark
-              priority
-              className="h-10 w-10 shadow-[0_0_28px_rgba(228,74,22,0.22)] transition-transform duration-500 group-hover:rotate-[-4deg]"
-            />
+            <AnvilMark priority className="h-10 w-10" />
             <span className="font-display text-[1.15rem] font-semibold tracking-tight sm:text-lg">
               Anvilry Labs
             </span>
@@ -156,7 +153,7 @@ export function Header() {
             <button
               type="button"
               onClick={openAudit}
-              className="btn-heat hidden cursor-pointer rounded-md px-3.5 py-2 text-sm font-semibold text-white sm:inline-flex"
+              className="btn-heat hidden cursor-pointer rounded-md px-3.5 py-2 text-sm font-semibold text-ink sm:inline-flex"
             >
               Free audit
             </button>
@@ -249,7 +246,7 @@ export function Header() {
                   setMenuOpen(false);
                   openAudit();
                 }}
-                className="btn-heat w-full cursor-pointer rounded-md px-3 py-3 text-base font-semibold text-white"
+                className="btn-heat w-full cursor-pointer rounded-md px-3 py-3 text-base font-semibold text-ink"
               >
                 Free audit
               </button>

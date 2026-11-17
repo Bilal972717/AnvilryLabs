@@ -10,24 +10,22 @@ const explore = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-line bg-forge text-ink">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px heat-bar opacity-50" />
-      <div className="pointer-events-none absolute -right-16 top-0 h-48 w-48 rounded-full bg-heat/10 blur-3xl" />
+    <footer className="relative overflow-hidden border-t border-line bg-[#232833] text-[#f4f1ea]">
       <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">
             <AnvilMark className="h-9 w-9" />
-            <span className="font-display text-lg font-bold tracking-tight">
+            <span className="font-display text-lg font-medium tracking-tight text-[#f4f1ea]">
               Anvilry Labs
             </span>
           </div>
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-steel">
+          <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#f4f1ea]/70">
             Software, properly forged. Websites, apps and custom software built
             to hold up — then made easy to find.
           </p>
         </div>
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#a3e635]">
             Explore
           </p>
           <ul className="mt-4 space-y-2.5">
@@ -35,7 +33,7 @@ export function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-ink-soft transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
+                  className="text-sm text-[#f4f1ea]/75 transition hover:text-[#f4f1ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3e635]"
                 >
                   {link.label}
                 </Link>
@@ -44,14 +42,14 @@ export function Footer() {
           </ul>
         </div>
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#a3e635]">
             Connect
           </p>
           <ul className="mt-4 space-y-2.5">
             <li>
               <Link
                 href="/contact"
-                className="text-sm text-ink-soft transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
+                className="text-sm text-[#f4f1ea]/75 transition hover:text-[#f4f1ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3e635]"
               >
                 Contact
               </Link>
@@ -59,7 +57,7 @@ export function Footer() {
             <li>
               <a
                 href="mailto:hello@anvilrylabs.com"
-                className="text-sm text-ink-soft transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
+                className="text-sm text-[#f4f1ea]/75 transition hover:text-[#f4f1ea] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#a3e635]"
               >
                 hello@anvilrylabs.com
               </a>
@@ -67,10 +65,10 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-line pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 pr-36 text-xs text-steel sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pr-40">
+      <div className="border-t border-white/10 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 pr-36 text-xs text-[#f4f1ea]/55 sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:pr-40">
           <p>© 2026 Anvilry Labs · anvilrylabs.com</p>
-          <p className="font-mono tracking-wide">Software, properly forged.</p>
+          <p className="font-mono tracking-[0.08em]">Software, properly forged.</p>
         </div>
       </div>
     </footer>

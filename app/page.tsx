@@ -147,34 +147,27 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-paper">
         <ForgeBackdrop />
-        <div className="relative mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-6xl items-center justify-center px-5 py-16 text-center sm:px-8">
-          <div className="relative z-10 mx-auto max-w-3xl">
-            <p className="animate-rise font-mono text-[11px] uppercase tracking-[0.24em] text-brass">
+        <div className="relative mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-6xl items-center justify-center px-5 pb-20 pt-14 text-center sm:px-8 sm:pb-24 sm:pt-16">
+          <div className="relative z-10 mx-auto max-w-4xl">
+            <p className="animate-rise font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Software, properly forged
             </p>
 
-            <h1 className="animate-rise-delay-1 mt-5 font-display text-[clamp(3.25rem,9.5vw,7rem)] font-semibold leading-[0.88] tracking-[-0.035em] text-ink">
-              Anvilry{" "}
-              <span className="bg-gradient-to-br from-ink via-heat to-brass bg-clip-text text-transparent">
-                Labs
-              </span>
+            <h1 className="animate-rise-delay-1 mt-6 font-display text-[clamp(3.5rem,10vw,7.5rem)] font-medium leading-[0.86] tracking-[-0.04em] text-ink">
+              Anvilry Labs
             </h1>
 
-            <p className="animate-rise-delay-2 mx-auto mt-8 max-w-xl font-display text-[1.65rem] font-medium leading-snug text-ink-soft sm:text-3xl">
-              We build software that holds up.
-            </p>
-            <p className="animate-rise-delay-2 mx-auto mt-4 max-w-lg text-base leading-relaxed text-steel sm:text-lg">
-              Websites, apps and custom software built with a craftsperson’s care
-              and an engineer’s rigor, then made easy to find.
+            <p className="animate-rise-delay-2 mx-auto mt-7 max-w-2xl font-display text-[1.45rem] font-medium leading-snug tracking-[-0.02em] text-ink-soft sm:mt-8 sm:text-[1.85rem]">
+              We build software that holds up — then make it easy to find.
             </p>
 
-            <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center justify-center gap-3">
-              <AuditTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-white">
+            <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-12">
+              <AuditTrigger className="btn-heat rounded-lg px-7 py-3.5 text-sm font-semibold text-ink">
                 Get my free audit
               </AuditTrigger>
               <Link
                 href="/contact"
-                className="btn-ghost rounded-lg px-6 py-3.5 text-sm font-semibold text-ink"
+                className="btn-ghost rounded-lg px-7 py-3.5 text-sm font-semibold text-ink"
               >
                 Start a project
               </Link>
@@ -183,66 +176,65 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Commitments */}
-      <section className="relative overflow-hidden border-y border-line bg-forge-plane">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px heat-bar opacity-80" />
-        <div className="pointer-events-none absolute -left-24 top-1/2 h-56 w-56 -translate-y-1/2 rounded-full bg-heat/10 blur-3xl" />
-        <div className="pointer-events-none absolute -right-20 top-0 h-48 w-48 rounded-full bg-brass/10 blur-3xl" />
-
-        <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-          <p className="text-center font-mono text-[11px] uppercase tracking-[0.2em] text-brass">
+      {/* Commitments + stack */}
+      <section className="relative overflow-hidden border-y border-line bg-[#232833] text-[#f4f1ea]">
+        <div className="heat-bar absolute inset-x-0 top-0 h-px" />
+        <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#a3e635]">
             Built into every engagement
           </p>
-          <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 sm:gap-8">
+
+          <dl className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-4 sm:gap-0">
             {[
               ["6", "Stages", "Each with a visible output"],
               ["4", "Service lines", "One standard throughout"],
               ["1", "Named contact", "On every project"],
               ["0", "Hidden costs", "Changes quoted first"],
-            ].map(([stat, title, label]) => (
-              <div key={title} className="text-center">
-                <dt className="font-display text-5xl font-bold tracking-tight text-ink sm:text-6xl">
-                  <span className="bg-gradient-to-br from-ink via-ink to-heat bg-clip-text text-transparent">
-                    {stat}
-                  </span>
+            ].map(([stat, title, label], i) => (
+              <div
+                key={title}
+                className={`sm:px-6 ${i > 0 ? "sm:border-l sm:border-white/10" : "sm:pl-0"}`}
+              >
+                <dt className="font-display text-5xl font-medium tracking-tight text-[#f4f1ea] sm:text-6xl">
+                  {stat}
                 </dt>
                 <dd className="mt-3">
-                  <p className="text-sm font-semibold text-ink">{title}</p>
-                  <p className="mt-1 text-sm leading-snug text-steel">{label}</p>
+                  <p className="text-sm font-semibold text-[#f4f1ea]">{title}</p>
+                  <p className="mt-1 text-sm leading-snug text-[#f4f1ea]/60">
+                    {label}
+                  </p>
                 </dd>
-                <div className="mx-auto mt-4 h-px w-10 bg-gradient-to-r from-transparent via-heat to-transparent" />
               </div>
             ))}
           </dl>
         </div>
-      </section>
 
-      {/* Marquee */}
-      <section
-        className="relative overflow-hidden border-b border-line bg-paper-elevated py-5"
-        aria-hidden="true"
-      >
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-paper-elevated to-transparent sm:w-28" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-paper-elevated to-transparent sm:w-28" />
-        <div className="marquee-track flex w-max items-center gap-3 whitespace-nowrap px-4">
-          {[...stack, ...stack].map((item, i) => (
-            <span
-              key={`${item}-${i}`}
-              className="inline-flex items-center gap-3 rounded-full border border-line bg-panel px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-ink-soft shadow-[0_1px_0_rgba(16,19,26,0.03)]"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-heat/80" />
-              {item}
-            </span>
-          ))}
+        <div
+          className="relative overflow-hidden border-t border-white/10 py-4"
+          aria-hidden="true"
+        >
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#232833] to-transparent sm:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#232833] to-transparent sm:w-24" />
+          <div className="marquee-track flex w-max items-center gap-8 whitespace-nowrap px-6">
+            {[...stack, ...stack].map((item, i) => (
+              <span
+                key={`${item}-${i}`}
+                className="inline-flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.08em] text-[#f4f1ea]/55"
+              >
+                {item}
+                <span className="h-1 w-1 rounded-full bg-[#a3e635]/70" />
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Who we help */}
       <section className="relative overflow-hidden bg-workshop py-20 sm:py-28">
-        <div className="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-heat/10 blur-3xl" />
+        <div className="pointer-events-none absolute -left-20 top-20 h-72 w-72 rounded-full bg-heat/5 blur-3xl" />
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Who we help
             </p>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -260,7 +252,7 @@ export default function Home() {
                 delayMs={i * 70}
                 className="surface-card group relative overflow-hidden rounded-2xl p-7 sm:p-8"
               >
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-heat/0 blur-2xl transition duration-500 group-hover:bg-heat/20" />
+                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-heat/0 blur-2xl transition duration-500 group-hover:bg-heat/8" />
                 <p className="relative font-mono text-[11px] text-brass">{item.n}</p>
                 <h3 className="relative mt-3 font-display text-2xl font-bold tracking-tight text-ink">
                   {item.title}
@@ -278,7 +270,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <div className="grid items-end gap-10 lg:grid-cols-[1fr_1.1fr]">
             <Reveal>
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+              <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
                 Craft you can see
               </p>
               <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -289,14 +281,14 @@ export default function Home() {
               </p>
             </Reveal>
 
-            <Reveal delayMs={120} className="panel-shadow overflow-hidden rounded-2xl border border-line bg-panel/95 backdrop-blur-sm">
-              <div className="flex items-center gap-2 border-b border-line bg-mist/60 px-4 py-3 font-mono text-[11px] text-steel">
-                <span className="h-2.5 w-2.5 rounded-full bg-heat/90" />
-                <span className="h-2.5 w-2.5 rounded-full bg-brass/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-steel/40" />
-                <span className="ml-2 text-brass">build.ts</span>
+            <Reveal delayMs={120} className="panel-shadow overflow-hidden rounded-2xl border border-line bg-[#232833]">
+              <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3 font-mono text-[11px] text-[#f4f1ea]/60">
+                <span className="h-2.5 w-2.5 rounded-full bg-heat" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#f4f1ea]/35" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#f4f1ea]/20" />
+                <span className="ml-2 text-[#f4f1ea]/70">build.ts</span>
               </div>
-              <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7 text-ink-soft sm:p-8 sm:text-sm">
+              <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7 text-[#f4f1ea]/85 sm:p-8 sm:text-sm">
                 <code>{`const brief = await listen();
 const plan = blueprint(brief);
 const site = forge(plan, { demo: true });
@@ -314,7 +306,7 @@ launch(site).thenCare();`}</code>
           <Reveal>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+                <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
                   Services
                 </p>
                 <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -341,7 +333,7 @@ launch(site).thenCare();`}</code>
                 className="service-row rounded-xl border border-line bg-panel/90 px-5 py-6 shadow-[0_1px_0_rgba(16,19,26,0.03)] sm:px-6"
               >
                 <div className="grid items-baseline gap-3 sm:grid-cols-[7.5rem_1fr_1.15fr]">
-                  <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-brass">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
                     {item.line}
                   </p>
                   <h3 className="font-display text-2xl font-bold tracking-tight text-ink">
@@ -357,10 +349,10 @@ launch(site).thenCare();`}</code>
 
       {/* Process */}
       <section className="relative overflow-hidden bg-forge py-20 sm:py-28">
-        <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-heat/15 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-heat/5 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Process reel
             </p>
             <h2 className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -386,10 +378,10 @@ launch(site).thenCare();`}</code>
 
       {/* Free audit */}
       <section className="relative overflow-hidden border-y border-line bg-paper-elevated py-16 sm:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(228,74,22,0.14),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(163,230,53,0.14),transparent_55%)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Free audit
             </p>
             <h2 className="mt-3 max-w-xl font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -401,7 +393,7 @@ launch(site).thenCare();`}</code>
             </p>
           </Reveal>
           <Reveal delayMs={80} className="flex flex-wrap gap-3">
-            <AuditTrigger className="btn-heat rounded-lg px-6 py-3 text-sm font-semibold text-white">
+            <AuditTrigger className="btn-heat rounded-lg px-6 py-3 text-sm font-semibold text-ink">
               Get my free audit
             </AuditTrigger>
             <Link
@@ -418,7 +410,7 @@ launch(site).thenCare();`}</code>
       <section className="bg-workshop py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Problems we solve
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -432,7 +424,7 @@ launch(site).thenCare();`}</code>
                 delayMs={i * 80}
                 className="surface-card rounded-2xl p-6"
               >
-                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-heat">
+                <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
                   Problem
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-ink">
@@ -449,7 +441,7 @@ launch(site).thenCare();`}</code>
       <section className="bg-paper-elevated py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Industries
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -468,7 +460,7 @@ launch(site).thenCare();`}</code>
           </Reveal>
 
           <Reveal className="mt-20">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Why Anvilry Labs
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -497,7 +489,7 @@ launch(site).thenCare();`}</code>
       <section className="bg-workshop py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               FAQ
             </p>
             <h2 className="mt-3 font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -516,7 +508,7 @@ launch(site).thenCare();`}</code>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1 heat-bar opacity-90" />
         <div className="relative mx-auto max-w-6xl px-5 text-center sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Software, properly forged.
             </p>
             <h2 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-bold tracking-tight text-ink sm:text-6xl">
@@ -526,7 +518,7 @@ launch(site).thenCare();`}</code>
               We’ll tell you exactly how we’d approach it.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <AuditTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-white">
+              <AuditTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-ink">
                 Get my free audit
               </AuditTrigger>
               <Link

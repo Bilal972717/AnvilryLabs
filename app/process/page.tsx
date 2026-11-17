@@ -69,15 +69,15 @@ export default function ProcessPage() {
       {/* Hero: one composition */}
       <section className="relative overflow-hidden border-b border-line">
         <div className="pointer-events-none absolute inset-0 bg-forge-plane opacity-90" />
-        <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-heat/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 top-10 h-72 w-72 rounded-full bg-heat/8 blur-3xl" />
         <div className="pointer-events-none absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-brass/10 blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl px-5 pb-14 pt-16 text-center sm:px-8 sm:pb-20 sm:pt-24">
           <Reveal className="mx-auto max-w-3xl">
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-brass">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
               Process
             </p>
-            <h1 className="mt-5 font-display text-[clamp(2.75rem,8vw,5.5rem)] font-semibold leading-[0.95] tracking-[-0.03em] text-ink">
+            <h1 className="mt-5 font-display text-[clamp(2.75rem,8vw,5.5rem)] font-medium leading-[0.95] tracking-[-0.03em] text-ink">
               Six stages.{" "}
               <span className="bg-gradient-to-r from-ink via-brass to-heat bg-clip-text text-transparent">
                 No surprises.
@@ -98,7 +98,7 @@ export default function ProcessPage() {
       {/* Forge path */}
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
             The forge path
           </p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
@@ -121,7 +121,7 @@ export default function ProcessPage() {
               <li className="relative grid gap-6 py-10 pl-12 sm:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] sm:gap-10 sm:pl-16 lg:gap-16">
                 <span
                   aria-hidden="true"
-                  className="absolute left-0 top-10 flex h-9 w-9 items-center justify-center rounded-full border border-heat/40 bg-panel font-mono text-[11px] text-heat shadow-[0_0_24px_rgba(239,85,32,0.25)] sm:h-11 sm:w-11 sm:text-xs"
+                  className="absolute left-0 top-10 flex h-9 w-9 items-center justify-center rounded-full border border-line bg-panel font-mono text-[11px] text-ink sm:h-11 sm:w-11 sm:text-xs"
                 >
                   {stage.n}
                 </span>
@@ -137,7 +137,7 @@ export default function ProcessPage() {
                     {stage.marks.map((mark) => (
                       <li
                         key={mark}
-                        className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-soft"
+                        className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-soft"
                       >
                         <span className="text-heat" aria-hidden="true">
                           ▸
@@ -150,7 +150,7 @@ export default function ProcessPage() {
 
                 <div className="relative border-l border-line pl-5 sm:border-l-0 sm:border-t-0 sm:pl-0 sm:pt-1">
                   <div className="absolute inset-x-0 top-0 h-px heat-bar opacity-60 sm:left-0 sm:right-auto sm:top-0 sm:h-full sm:w-px" />
-                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brass">
+                  <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-brass">
                     What you see
                   </p>
                   <p className="mt-3 font-display text-xl font-semibold leading-snug text-ink sm:text-2xl">
@@ -165,10 +165,10 @@ export default function ProcessPage() {
 
       {/* Commitments */}
       <section className="relative overflow-hidden border-y border-line bg-forge py-20 text-ink sm:py-28">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_0%,rgba(239,85,32,0.18),transparent_55%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_0%,rgba(163,230,53,0.18),transparent_55%)]" />
         <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Our commitments
             </p>
             <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold tracking-tight sm:text-4xl">
@@ -181,7 +181,7 @@ export default function ProcessPage() {
               <Reveal key={item} delayMs={i * 40}>
                 <li className="flex gap-4 border-t border-line py-5">
                   <span
-                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-heat/15 text-xs text-heat"
+                    className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-heat/5 text-xs text-heat"
                     aria-hidden="true"
                   >
                     ✓
@@ -199,7 +199,7 @@ export default function ProcessPage() {
       {/* Close */}
       <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
             Next step
           </p>
           <h2 className="mt-3 max-w-2xl font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl">
@@ -212,7 +212,7 @@ export default function ProcessPage() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="btn-heat inline-flex rounded-md px-5 py-3.5 text-sm font-semibold text-white"
+              className="btn-heat inline-flex rounded-md px-5 py-3.5 text-sm font-semibold text-ink"
             >
               Start a project
             </Link>

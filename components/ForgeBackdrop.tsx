@@ -3,22 +3,25 @@ import Image from "next/image";
 export function ForgeBackdrop() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-      <Image
-        src="/hero-bg.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="scale-105 object-cover object-center"
-      />
+      <div className="absolute inset-0 hero-kenburns">
+        <Image
+          src="/hero-lab.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[center_30%]"
+        />
+      </div>
 
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(243,245,249,0.55)_0%,rgba(243,245,249,0.35)_40%,rgba(243,245,249,0.62)_100%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(243,245,249,0.78)_0%,rgba(243,245,249,0.35)_48%,transparent_72%)]" />
-      <div className="noise-overlay absolute inset-0 opacity-60" />
+      {/* Soft wash so the photo stays the plane; denser only behind copy */}
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(244,241,234,0.42)_0%,rgba(244,241,234,0.1)_24%,rgba(244,241,234,0.08)_52%,rgba(244,241,234,0.88)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_68%_52%_at_50%_40%,rgba(244,241,234,0.9)_0%,rgba(244,241,234,0.55)_38%,rgba(244,241,234,0.18)_62%,transparent_78%)]" />
+      <div className="noise-overlay absolute inset-0 opacity-35" />
 
-      <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-paper via-paper/85 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-paper/50 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-px heat-bar opacity-90" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-paper via-paper/80 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-paper/45 to-transparent" />
+      <div className="heat-bar absolute inset-x-0 top-0 h-px" />
     </div>
   );
 }

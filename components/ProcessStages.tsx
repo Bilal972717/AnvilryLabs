@@ -82,16 +82,12 @@ export function ProcessStages() {
         }
       }}
     >
-      <div className="absolute inset-x-0 top-0 h-px heat-bar" />
-      <div className="pointer-events-none absolute -right-16 -top-20 h-48 w-48 rounded-full bg-heat/15 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-24 -left-10 h-44 w-44 rounded-full bg-brass/10 blur-3xl" />
-
       <div className="relative border-b border-line px-4 py-4 sm:px-6 sm:py-5">
         <div className="mb-4 flex items-center justify-between gap-3">
-          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-brass">
+          <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
             Six-stage forge path
           </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-steel">
+          <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
             {String(active + 1).padStart(2, "0")} / {String(stages.length).padStart(2, "0")}
           </p>
         </div>
@@ -116,25 +112,25 @@ export function ProcessStages() {
                 onClick={() => setActive(index)}
                 className={`group relative min-w-[4.75rem] flex-1 cursor-pointer rounded-xl border px-2.5 py-3 text-left transition sm:min-w-0 sm:px-3 ${
                   selected
-                    ? "border-heat/40 bg-heat text-white shadow-[0_10px_28px_rgba(228,74,22,0.28)]"
+                    ? "border-heat/50 bg-heat text-ink shadow-[0_10px_28px_rgba(163,230,53,0.28)]"
                     : done
                       ? "border-brass/30 bg-brass/10 text-ink hover:border-brass/50"
                       : "border-line bg-panel-muted text-ink-soft hover:border-heat/30 hover:bg-mist hover:text-ink"
                 }`}
               >
                 <span
-                  className={`font-mono text-[10px] uppercase tracking-[0.16em] ${
-                    selected ? "text-white/80" : "text-brass"
+                  className={`font-mono text-[10px] uppercase tracking-[0.08em] ${
+                    selected ? "text-ink/70" : "text-brass"
                   }`}
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="mt-1 block text-sm font-semibold">{item.label}</span>
                 {selected && !reduceMotion ? (
-                  <span className="absolute inset-x-3 bottom-1.5 h-0.5 overflow-hidden rounded-full bg-white/25">
+                  <span className="absolute inset-x-3 bottom-1.5 h-0.5 overflow-hidden rounded-full bg-ink/15">
                     <span
                       key={stage.id}
-                      className="progress-fill block h-full rounded-full bg-white/90"
+                      className="progress-fill block h-full rounded-full bg-ink/70"
                     />
                   </span>
                 ) : null}
@@ -152,9 +148,9 @@ export function ProcessStages() {
         className="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center"
       >
         <div key={stage.id} className={reduceMotion ? undefined : "animate-rise"}>
-          <div className="inline-flex items-center gap-2 rounded-full border border-heat/25 bg-heat/10 px-3 py-1">
+          <div className="inline-flex items-center gap-2 rounded-full border border-heat/25 bg-heat/5 px-3 py-1">
             <span className="h-1.5 w-1.5 rounded-full bg-heat" />
-            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-heat">
+            <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-heat">
               Stage {String(active + 1).padStart(2, "0")} · {stage.label}
             </p>
           </div>

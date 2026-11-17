@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import { AnvilMark } from "@/components/AnvilMark";
 import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
 
@@ -26,19 +26,19 @@ const points = [
 export default function ContactPage() {
   return (
     <div className="relative overflow-hidden bg-workshop">
-      <div className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-heat/15 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-24 h-80 w-80 rounded-full bg-heat/5 blur-3xl" />
       <div className="pointer-events-none absolute -right-16 bottom-10 h-96 w-96 rounded-full bg-brass/10 blur-3xl" />
 
       <section className="relative mx-auto max-w-6xl px-5 pb-10 pt-16 text-center sm:px-8 sm:pt-24">
         <Reveal className="mx-auto max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-line bg-panel-muted px-3 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_10px_rgba(228,74,22,0.9)]" />
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-brass">
+            <span className="h-1.5 w-1.5 rounded-full bg-heat shadow-[0_0_10px_rgba(163,230,53,0.9)]" />
+            <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-brass">
               Contact
             </p>
           </div>
 
-          <h1 className="mt-6 font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-6 font-display text-5xl font-medium tracking-tight text-ink sm:text-6xl">
             Start a{" "}
             <span className="bg-gradient-to-r from-ink via-brass to-heat bg-clip-text text-transparent">
               project.
@@ -53,7 +53,7 @@ export default function ContactPage() {
             href="mailto:hello@anvilrylabs.com"
             className="mt-7 inline-flex items-center gap-3 rounded-lg border border-line bg-panel-muted px-4 py-3 font-mono text-sm text-ink transition hover:border-brass/40 hover:bg-mist"
           >
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-heat/15 text-[11px] font-semibold text-heat">
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-heat/5 text-[11px] font-semibold text-heat">
               @
             </span>
             hello@anvilrylabs.com
@@ -82,28 +82,19 @@ export default function ContactPage() {
           delayMs={90}
           className="panel-shadow relative overflow-hidden rounded-2xl border border-line bg-panel"
         >
-          <div className="absolute inset-x-0 top-0 h-px heat-bar" />
-          <div className="pointer-events-none absolute -right-10 -top-16 h-40 w-40 rounded-full bg-heat/15 blur-3xl" />
-
           <div className="relative flex items-center justify-between border-b border-line px-6 py-4 sm:px-8">
             <div className="flex items-center gap-3">
-              <Image
-                src="/logo.png"
-                alt=""
-                width={36}
-                height={36}
-                className="rounded-md"
-              />
+              <AnvilMark className="h-9 w-9" />
               <div className="text-left">
                 <p className="font-display text-sm font-semibold text-ink">
                   Anvilry Labs
                 </p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-steel">
+                <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
                   Enquiry desk
                 </p>
               </div>
             </div>
-            <span className="rounded-full border border-heat/30 bg-heat/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.14em] text-heat">
+            <span className="rounded-full border border-line bg-mist px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft">
               Reply in 1 day
             </span>
           </div>

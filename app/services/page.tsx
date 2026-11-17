@@ -63,10 +63,10 @@ export default function ServicesPage() {
     <div className="bg-workshop">
       <section className="mx-auto max-w-6xl px-5 pb-10 pt-16 text-center sm:px-8 sm:pt-24">
         <Reveal className="mx-auto max-w-3xl">
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-heat">
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
             Services
           </p>
-          <h1 className="mt-4 font-display text-5xl font-semibold tracking-tight text-ink sm:text-6xl">
+          <h1 className="mt-4 font-display text-5xl font-medium tracking-tight text-ink sm:text-6xl">
             Built to last. Easy to find.
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-steel">
@@ -107,7 +107,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="btn-heat mt-6 inline-flex rounded-md px-5 py-3 text-sm font-semibold text-white"
+            className="btn-heat mt-6 inline-flex rounded-md px-5 py-3 text-sm font-semibold text-ink"
           >
             Book a discovery call
           </Link>
