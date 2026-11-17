@@ -147,21 +147,25 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-paper">
         <ForgeBackdrop />
-        <div className="relative mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-6xl items-center justify-center px-5 pb-20 pt-14 text-center sm:px-8 sm:pb-24 sm:pt-16">
-          <div className="relative z-10 mx-auto max-w-4xl">
-            <p className="animate-rise font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
-              Software, properly forged
-            </p>
+        <div className="relative mx-auto flex min-h-[calc(100svh-var(--site-header-h))] max-w-6xl items-end px-5 pb-16 pt-20 sm:items-center sm:px-8 sm:pb-24 sm:pt-16">
+          <div className="relative z-10 max-w-xl lg:max-w-2xl">
+            <div className="animate-rise flex items-center gap-3">
+              <span className="h-px w-8 bg-heat sm:w-10" aria-hidden="true" />
+              <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-heat-deep">
+                Software, properly forged
+              </p>
+            </div>
 
-            <h1 className="animate-rise-delay-1 mt-6 font-display text-[clamp(3.5rem,10vw,7.5rem)] font-medium leading-[0.86] tracking-[-0.04em] text-ink">
-              Anvilry Labs
+            <h1 className="animate-rise-delay-1 mt-6 font-display text-[clamp(3.75rem,11vw,7.75rem)] font-medium leading-[0.84] tracking-[-0.045em] text-ink">
+              Anvilry
+              <span className="block">Labs</span>
             </h1>
 
-            <p className="animate-rise-delay-2 mx-auto mt-7 max-w-2xl font-display text-[1.45rem] font-medium leading-snug tracking-[-0.02em] text-ink-soft sm:mt-8 sm:text-[1.85rem]">
-              We build software that holds up — then make it easy to find.
+            <p className="animate-rise-delay-2 mt-7 max-w-md text-lg leading-relaxed text-ink-soft sm:mt-8 sm:text-xl">
+              Software that holds up — then made easy to find.
             </p>
 
-            <div className="animate-rise-delay-3 mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-12">
+            <div className="animate-rise-delay-3 mt-9 flex flex-wrap items-center gap-3 sm:mt-11">
               <AuditTrigger className="btn-heat rounded-lg px-7 py-3.5 text-sm font-semibold text-ink">
                 Get my free audit
               </AuditTrigger>
