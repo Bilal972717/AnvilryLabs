@@ -146,6 +146,10 @@ const industries = [
 export default function Home() {
   return (
     <>
+      <Script
+        src="https://www.googletagmanager.com/gtm.js?id=G-TC4CR073C0"
+        strategy="afterInteractive"
+      />
       <Script id="gtm-datalayer" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
