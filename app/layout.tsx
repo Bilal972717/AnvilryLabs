@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/mark.svg", type: "image/svg+xml" },
+      { url: "/mark-light.png", type: "image/png" },
       { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
       { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
@@ -51,6 +51,9 @@ export const metadata: Metadata = {
     url: "https://www.anvilrylabs.com",
     siteName: "Anvilry Labs",
     type: "website",
+    images: [
+      { url: "/logo-primary-light.png", width: 1024, height: 686, alt: "Anvilry Labs" },
+    ],
   },
   twitter: {
     card: "summary",

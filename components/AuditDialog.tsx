@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
-import { AnvilMark } from "@/components/AnvilMark";
+import { AnvilryLogo } from "@/components/AnvilryLogo";
 import { CustomSelect } from "@/components/CustomSelect";
 import {
   Dialog,
@@ -105,16 +105,11 @@ export function AuditDialog({ open, onClose }: AuditDialogProps) {
         <div className="absolute inset-x-0 top-0 z-20 h-px bg-line" />
 
         <header className="relative z-10 flex shrink-0 items-center justify-between gap-3 border-b border-line bg-panel px-4 py-3 sm:px-6 sm:py-4">
-          <div className="flex min-w-0 items-center gap-3">
-            <AnvilMark className="h-9 w-9 shrink-0 sm:h-10 sm:w-10" />
-            <div className="min-w-0">
-              <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
-                Free audit
-              </p>
-              <p className="truncate font-display text-sm font-semibold text-ink">
-                Anvilry Labs
-              </p>
-            </div>
+          <div className="flex min-w-0 flex-col gap-1">
+            <AnvilryLogo variant="light" className="h-10 sm:h-11" />
+            <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
+              Free audit
+            </p>
           </div>
           <DialogClose
             className="inline-flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-lg border border-line bg-panel-muted text-lg leading-none text-steel transition hover:bg-mist hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"

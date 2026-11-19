@@ -1,8 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-hidden="true">
-  <rect width="64" height="64" rx="12" fill="#101A2E"/>
-  <path d="M32 10 L50 52 H42.6 L39.2 42.8 H24.8 L21.4 52 H14 L32 10Z" fill="#F6F2EA"/>
-  <path d="M32 18.5 L41.2 42.8 H22.8 L32 18.5Z" fill="#101A2E"/>
-  <path d="M18 30 H46" stroke="#CF7F48" stroke-width="3.2" stroke-linecap="square"/>
-  <path d="M20.5 36.5 H43.5" stroke="#CF7F48" stroke-width="2.2" stroke-linecap="square"/>
-  <path d="M23 43 H41" stroke="#CF7F48" stroke-width="2.2" stroke-linecap="square"/>
+  <rect width="64" height="64" rx="14" fill="#F6F2EA"/>
+  <!-- Outer copper wing layers -->
+  <path d="M18 28 L32 14 L46 28 L41.5 28 L32 18.8 L22.5 28 Z" fill="none" stroke="#CF7F48" stroke-width="1.6" stroke-linejoin="miter"/>
+  <path d="M14 32 L32 14 L50 32 L45.2 32 L32 19.2 L18.8 32 Z" fill="none" stroke="#CF7F48" stroke-width="1.4" stroke-linejoin="miter"/>
+  <!-- Navy A outer legs -->
+  <path d="M32 12 L48 50 H41.2 L37.6 40.2 H26.4 L22.8 50 H16 L32 12Z" fill="#101A2E"/>
+  <path d="M32 18.2 L41.6 43.6 H22.4 L32 18.2Z" fill="#F6F2EA"/>
+  <!-- Copper center line in A -->
+  <path d="M32 16.5 L44.8 48.5" stroke="#CF7F48" stroke-width="1.5" stroke-linecap="square"/>
+  <path d="M32 16.5 L19.2 48.5" stroke="#CF7F48" stroke-width="1.5" stroke-linecap="square"/>
+  <!-- Inner chevron crossbar -->
+  <path d="M24.5 34.5 L32 27.2 L39.5 34.5" fill="none" stroke="#101A2E" stroke-width="3.2" stroke-linejoin="miter" stroke-linecap="square"/>
+  <path d="M26.2 34 L32 28.4 L37.8 34" fill="none" stroke="#CF7F48" stroke-width="1.4" stroke-linejoin="miter" stroke-linecap="square"/>
 </svg>

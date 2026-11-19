@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AnvilMark } from "@/components/AnvilMark";
+import { AnvilryLogo } from "@/components/AnvilryLogo";
 import { ContactForm } from "@/components/ContactForm";
 import { Reveal } from "@/components/Reveal";
 
@@ -83,16 +83,11 @@ export default function ContactPage() {
           className="panel-shadow relative overflow-hidden rounded-2xl border border-line bg-panel"
         >
           <div className="relative flex items-center justify-between border-b border-line px-6 py-4 sm:px-8">
-            <div className="flex items-center gap-3">
-              <AnvilMark className="h-9 w-9" />
-              <div className="text-left">
-                <p className="font-display text-sm font-semibold text-ink">
-                  Anvilry Labs
-                </p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
-                  Enquiry desk
-                </p>
-              </div>
+            <div className="flex flex-col gap-1 text-left">
+              <AnvilryLogo variant="light" className="h-11" />
+              <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-steel">
+                Enquiry desk
+              </p>
             </div>
             <span className="rounded-full border border-line bg-mist px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-soft">
               Reply in 1 day

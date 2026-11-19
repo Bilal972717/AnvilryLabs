@@ -1,9 +1,11 @@
 import Link from "next/link";
+import Script from "next/script";
 import { AuditTrigger } from "@/components/AuditTrigger";
 import { Faq } from "@/components/Faq";
 import { ForgeBackdrop } from "@/components/ForgeBackdrop";
 import { ProcessStages } from "@/components/ProcessStages";
 import { Reveal } from "@/components/Reveal";
+import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 
 const audiences = [
   {
@@ -144,6 +146,18 @@ const industries = [
 export default function Home() {
   return (
     <>
+      <Script id="gtm-datalayer" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        `}
+      </Script>
+      <Script
+        src="https://www.googletagmanager.com/gtm.js?id=GTM-KRQ2SS42"
+        strategy="afterInteractive"
+      />
+
       {/* Hero */}
       <section className="relative overflow-hidden bg-paper">
         <ForgeBackdrop />
@@ -486,6 +500,26 @@ launch(site).thenCare();`}</code>
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="relative overflow-hidden border-y border-line bg-[#101a2e] py-20 text-[#f6f2ea] sm:py-28">
+        <div className="heat-bar absolute inset-x-0 top-0 h-px" />
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <Reveal>
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-[#cf7f48]">
+              Client words
+            </p>
+            <h2 className="mt-3 max-w-2xl font-display text-4xl font-medium tracking-tight text-[#f6f2ea] sm:text-5xl">
+              Glad they chose us.
+            </h2>
+            <p className="mt-4 max-w-xl text-base text-[#f6f2ea]/60">
+              Real projects. Plain feedback. The same standard every time.
+            </p>
+          </Reveal>
+
+          <TestimonialsCarousel />
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AnvilMark } from "@/components/AnvilMark";
+import { AnvilryLogo } from "@/components/AnvilryLogo";
 
 const explore = [
   { href: "/services", label: "Services" },
@@ -13,11 +13,8 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-line bg-[#101a2e] text-[#f6f2ea]">
       <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2.5">
-            <AnvilMark className="h-9 w-9" />
-            <span className="font-display text-lg font-medium tracking-tight text-[#f6f2ea]">
-              Anvilry Labs
-            </span>
+          <div className="flex items-center">
+            <AnvilryLogo variant="dark" className="h-14 sm:h-16" />
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#f6f2ea]/70">
             Software, properly forged. Websites, apps and custom software built

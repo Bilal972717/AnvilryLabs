@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { AnvilMark } from "@/components/AnvilMark";
 import { useAudit } from "@/components/AuditProvider";
 
 const links = [
@@ -101,29 +101,36 @@ export function Header() {
         <button
           type="button"
           onClick={openAudit}
-          className="group flex w-full cursor-pointer items-center justify-center gap-2 border-b border-line bg-[#101a2e] px-4 py-2.5 text-center text-[#f6f2ea] transition hover:bg-[#1a2740] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-heat"
+          className="group flex w-full cursor-pointer items-center justify-center border-b border-line bg-[#101a2e] px-4 py-2.5 text-center text-[#f6f2ea] transition hover:bg-[#1a2740] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-heat"
         >
-          <span className="text-[12px] font-medium text-[#f6f2ea]/85 sm:text-[13px]">
-            Free website and SEO audit for new enquiries.
-          </span>
-          <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#cf7f48] transition group-hover:text-[#d9925c] sm:text-[13px]">
-            Claim yours
-            <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
-              →
+          <span className="max-w-[22rem] text-[12px] font-medium leading-snug text-[#f6f2ea]/85 sm:max-w-none sm:text-[13px]">
+            Free website and SEO audit for new enquiries.{" "}
+            <span className="inline-flex items-center gap-1 font-semibold text-[#cf7f48] transition group-hover:text-[#d9925c]">
+              Claim yours
+              <span
+                aria-hidden="true"
+                className="transition-transform group-hover:translate-x-0.5"
+              >
+                →
+              </span>
             </span>
           </span>
         </button>
 
-        <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 sm:h-[4.5rem] sm:px-8">
+        <div className="mx-auto flex h-[4.75rem] max-w-6xl items-center justify-between gap-4 px-5 sm:h-20 sm:px-8">
           <Link
             href="/"
-            className="group flex items-center gap-2.5 rounded-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
+            className="group flex items-center rounded-sm text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
             onClick={() => setMenuOpen(false)}
           >
-            <AnvilMark priority className="h-10 w-10" />
-            <span className="font-display text-[1.15rem] font-semibold tracking-tight sm:text-lg">
-              Anvilry Labs
-            </span>
+            <Image
+              src="/logo-nav.png"
+              alt="Anvilry Labs"
+              width={537}
+              height={434}
+              priority
+              className="h-14 w-auto sm:h-16"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
@@ -201,11 +208,14 @@ export function Header() {
             className="absolute right-0 top-0 flex h-full w-[min(86vw,22rem)] flex-col border-l border-line bg-panel shadow-[-20px_0_48px_rgba(20,22,28,0.12)]"
           >
             <div className="flex items-center justify-between border-b border-line px-5 py-4">
-              <div className="flex items-center gap-2.5">
-                <AnvilMark className="h-9 w-9" />
-                <span className="font-display text-base font-semibold tracking-tight text-ink">
-                  Anvilry Labs
-                </span>
+              <div className="flex items-center">
+                <Image
+                  src="/logo-nav.png"
+                  alt="Anvilry Labs"
+                  width={537}
+                  height={434}
+                  className="h-12 w-auto"
+                />
               </div>
               <button
                 ref={closeButtonRef}
