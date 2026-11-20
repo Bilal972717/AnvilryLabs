@@ -24,6 +24,10 @@ const faqs = [
     a: "You do. Handover includes full documentation and ownership of code and assets.",
   },
   {
+    q: "What does the free consultation include?",
+    a: "A short discovery call to talk through what you need, how we’d approach it, and whether we’re a fit — with clear next steps in writing.",
+  },
+  {
     q: "What does the free audit include?",
     a: "A written review of speed, technical SEO and structure, with the highest-impact fixes listed first.",
   },

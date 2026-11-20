@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import { AuditTrigger } from "@/components/AuditTrigger";
+import { ConsultationTrigger } from "@/components/ConsultationTrigger";
 import { Faq } from "@/components/Faq";
 import { ForgeBackdrop } from "@/components/ForgeBackdrop";
 import { ProcessStages } from "@/components/ProcessStages";
@@ -184,15 +185,12 @@ export default function Home() {
             </p>
 
             <div className="animate-rise-delay-3 mt-9 flex flex-wrap items-center gap-3 sm:mt-11">
-              <AuditTrigger className="btn-heat rounded-lg px-7 py-3.5 text-sm font-semibold text-ink">
+              <ConsultationTrigger className="btn-heat rounded-lg px-7 py-3.5 text-sm font-semibold text-ink">
+                Book a free consultation
+              </ConsultationTrigger>
+              <AuditTrigger className="btn-ghost rounded-lg px-7 py-3.5 text-sm font-semibold text-ink">
                 Get my free audit
               </AuditTrigger>
-              <Link
-                href="/contact"
-                className="btn-ghost rounded-lg px-7 py-3.5 text-sm font-semibold text-ink"
-              >
-                Start a project
-              </Link>
             </div>
           </div>
         </div>
@@ -398,11 +396,28 @@ launch(site).thenCare();`}</code>
         </div>
       </section>
 
-      {/* Free audit */}
+      {/* Free consultation + audit */}
       <section className="relative overflow-hidden border-y border-line bg-paper-elevated py-16 sm:py-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_right,rgba(207,127,72,0.14),transparent_55%)]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-8 px-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16">
           <Reveal>
+            <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
+              Free consultation
+            </p>
+            <h2 className="mt-3 max-w-xl font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+              Talk through what you’re building.
+            </h2>
+            <p className="mt-3 max-w-lg text-base text-steel">
+              A short discovery call covering goals, approach and fit — with
+              clear next steps in writing. No obligation.
+            </p>
+            <div className="mt-6">
+              <ConsultationTrigger className="btn-heat rounded-lg px-6 py-3 text-sm font-semibold text-ink">
+                Book a free consultation
+              </ConsultationTrigger>
+            </div>
+          </Reveal>
+          <Reveal delayMs={80}>
             <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-steel">
               Free audit
             </p>
@@ -413,17 +428,11 @@ launch(site).thenCare();`}</code>
               A short, written review of your site’s speed, SEO and structure,
               with the highest-impact fixes first. No obligation.
             </p>
-          </Reveal>
-          <Reveal delayMs={80} className="flex flex-wrap gap-3">
-            <AuditTrigger className="btn-heat rounded-lg px-6 py-3 text-sm font-semibold text-ink">
-              Get my free audit
-            </AuditTrigger>
-            <Link
-              href="/contact"
-              className="btn-ghost rounded-lg px-6 py-3 text-sm font-semibold text-ink"
-            >
-              Book a discovery call
-            </Link>
+            <div className="mt-6">
+              <AuditTrigger className="btn-ghost rounded-lg px-6 py-3 text-sm font-semibold text-ink">
+                Get my free audit
+              </AuditTrigger>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -560,15 +569,12 @@ launch(site).thenCare();`}</code>
               We’ll tell you exactly how we’d approach it.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <AuditTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-ink">
+              <ConsultationTrigger className="btn-heat rounded-lg px-6 py-3.5 text-sm font-semibold text-ink">
+                Book a free consultation
+              </ConsultationTrigger>
+              <AuditTrigger className="btn-ghost rounded-lg px-6 py-3.5 text-sm font-semibold text-ink">
                 Get my free audit
               </AuditTrigger>
-              <Link
-                href="/contact"
-                className="btn-ghost rounded-lg px-6 py-3.5 text-sm font-semibold text-ink"
-              >
-                Start a project
-              </Link>
             </div>
           </Reveal>
         </div>
