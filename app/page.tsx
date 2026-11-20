@@ -1,12 +1,25 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { AuditTrigger } from "@/components/AuditTrigger";
 import { ConsultationTrigger } from "@/components/ConsultationTrigger";
 import { Faq } from "@/components/Faq";
 import { ForgeBackdrop } from "@/components/ForgeBackdrop";
+import { JsonLd } from "@/components/JsonLd";
 import { ProcessStages } from "@/components/ProcessStages";
 import { Reveal } from "@/components/Reveal";
 import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
+import { faqPageJsonLd, homeFaqs } from "@/lib/faqs";
+import { industryPages } from "@/lib/industries";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Anvilry Labs — Software, properly forged.",
+  },
+  description:
+    "Custom software, websites, apps and SEO from Anvilry Labs. Fixed scope, named contact, free consultation and free written audit for new enquiries.",
+  alternates: { canonical: "/" },
+};
 
 const audiences = [
   {
@@ -133,20 +146,11 @@ const stack = [
   "Cloudflare",
 ];
 
-const industries = [
-  "Ecommerce and retail",
-  "Service businesses",
-  "Agencies",
-  "Health and wellness",
-  "SaaS and startups",
-  "Professional services",
-  "Hospitality",
-  "Education",
-];
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={faqPageJsonLd(homeFaqs)} />
       <Script
         src="https://www.googletagmanager.com/gtm.js?id=G-TC4CR073C0"
         strategy="afterInteractive"
@@ -156,6 +160,7 @@ export default function Home() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+          gtag('config', 'G-TC4CR073C0');
         `}
       </Script>
       <Script
@@ -428,10 +433,16 @@ launch(site).thenCare();`}</code>
               A short, written review of your site’s speed, SEO and structure,
               with the highest-impact fixes first. No obligation.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <AuditTrigger className="btn-ghost rounded-lg px-6 py-3 text-sm font-semibold text-ink">
                 Get my free audit
               </AuditTrigger>
+              <Link
+                href="/free-audit"
+                className="text-sm font-semibold text-brass underline decoration-heat/60 underline-offset-4 hover:text-ink"
+              >
+                How the audit works →
+              </Link>
             </div>
           </Reveal>
         </div>
@@ -480,14 +491,21 @@ launch(site).thenCare();`}</code>
             </h2>
           </Reveal>
           <Reveal delayMs={80} className="mt-8 flex flex-wrap gap-2">
-            {industries.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-line bg-panel px-4 py-2 text-sm text-ink-soft shadow-[0_1px_0_rgba(16,19,26,0.03)] transition hover:border-heat/35 hover:text-ink"
+            {industryPages.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/industries/${item.slug}`}
+                className="rounded-full border border-line bg-panel px-4 py-2 text-sm text-ink-soft shadow-[0_1px_0_rgba(16,19,26,0.03)] transition hover:border-heat/35 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
               >
-                {item}
-              </span>
+                {item.title}
+              </Link>
             ))}
+            <Link
+              href="/industries"
+              className="rounded-full border border-heat/40 bg-heat/10 px-4 py-2 text-sm font-semibold text-heat-deep transition hover:border-heat hover:bg-heat/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-heat"
+            >
+              All industries →
+            </Link>
           </Reveal>
 
           <Reveal className="mt-20">

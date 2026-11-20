@@ -4,7 +4,9 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Raw material, shaped properly. Anvil. Ry. Labs.",
+  description:
+    "About Anvilry Labs — craftsperson care, engineer rigor, and software built to hold up then made easy to find.",
+  alternates: { canonical: "/about" },
 };
 
 const nameParts = [

@@ -5,7 +5,9 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Start a project. Tell us what you are building. We reply within one working day.",
+  description:
+    "Contact Anvilry Labs to start a project or ask a question. We reply within one working day.",
+  alternates: { canonical: "/contact" },
 };
 
 const points = [

@@ -5,7 +5,8 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "How we present proof: problem, approach, result and handover. Selected work available on a call.",
+    "How Anvilry Labs presents proof: problem, approach, result and handover. Selected work available on a call.",
+  alternates: { canonical: "/work" },
 };
 
 const format = [

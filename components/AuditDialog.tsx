@@ -10,6 +10,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { trackEvent } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type AuditDialogProps = {
@@ -126,6 +127,10 @@ export function AuditDialog({ open, mode, onClose }: AuditDialogProps) {
 
     setDraft({ name, website, email, focus, body, mailto, subject });
     setCopied(false);
+    trackEvent(
+      mode === "audit" ? "audit_request_submit" : "consultation_request_submit",
+      { focus, has_website: Boolean(website) },
+    );
     window.location.href = mailto;
   }
 

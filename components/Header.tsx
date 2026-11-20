@@ -5,11 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useAudit } from "@/components/AuditProvider";
+import { trackEvent } from "@/lib/analytics";
 
 const links = [
   { href: "/services", label: "Services" },
+  { href: "/industries", label: "Industries" },
   { href: "/work", label: "Work" },
   { href: "/process", label: "Process" },
+  { href: "/journal", label: "Journal" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -100,7 +103,10 @@ export function Header() {
       >
         <button
           type="button"
-          onClick={openAudit}
+          onClick={() => {
+            trackEvent("audit_cta_click", { location: "announcement_bar" });
+            openAudit();
+          }}
           className="group flex w-full cursor-pointer items-center justify-center border-b border-line bg-[#101a2e] px-4 py-2.5 text-center text-[#f6f2ea] transition hover:bg-[#1a2740] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-heat"
         >
           <span className="max-w-[22rem] text-[12px] font-medium leading-snug text-[#f6f2ea]/85 sm:max-w-none sm:text-[13px]">
@@ -159,7 +165,10 @@ export function Header() {
           <div className="flex items-center gap-2">
             <button
               type="button"
-              onClick={openAudit}
+              onClick={() => {
+                trackEvent("audit_cta_click", { location: "header" });
+                openAudit();
+              }}
               className="btn-heat hidden cursor-pointer rounded-md px-3.5 py-2 text-sm font-semibold text-ink sm:inline-flex"
             >
               Free audit
@@ -191,7 +200,7 @@ export function Header() {
       </header>
 
       {menuOpen ? (
-        <div className="fixed inset-0 z-50 md:hidden">
+        <div className="fixed inset-0 z-[60] md:hidden">
           <button
             type="button"
             aria-label="Close menu"
@@ -253,6 +262,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => {
+                  trackEvent("audit_cta_click", { location: "mobile_menu" });
                   setMenuOpen(false);
                   openAudit();
                 }}

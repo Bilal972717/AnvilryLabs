@@ -6,7 +6,9 @@ import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Process",
-  description: "Six stages. No surprises. A working demo at every milestone.",
+  description:
+    "The Anvilry Labs process: six stages, written scope, working demos every milestone, and a clean handover.",
+  alternates: { canonical: "/process" },
 };
 
 const stages = [

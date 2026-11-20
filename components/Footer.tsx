@@ -3,8 +3,12 @@ import { AnvilryLogo } from "@/components/AnvilryLogo";
 
 const explore = [
   { href: "/services", label: "Services" },
+  { href: "/industries", label: "Industries" },
   { href: "/work", label: "Work" },
   { href: "/process", label: "Process" },
+  { href: "/journal", label: "Journal" },
+  { href: "/pricing-guide", label: "Pricing guide" },
+  { href: "/free-audit", label: "Free audit" },
   { href: "/about", label: "About" },
 ];
 

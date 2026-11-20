@@ -1,37 +1,7 @@
 "use client";
 
 import { useId, useState } from "react";
-
-const faqs = [
-  {
-    q: "Who do you work with?",
-    a: "Anyone who wants it done properly: founders, small businesses, established brands and international clients.",
-  },
-  {
-    q: "What do you build?",
-    a: "Websites, web and mobile apps, custom software, template-based and CMS-based builds, ecommerce stores, and SEO.",
-  },
-  {
-    q: "How long do projects take?",
-    a: "It depends on scope, which we agree in writing during Blueprint. Accelerated builds launch in weeks.",
-  },
-  {
-    q: "How do you price?",
-    a: "Pricing is agreed up front. Changes are quoted before they are built, so there are no hidden costs.",
-  },
-  {
-    q: "Who owns the code?",
-    a: "You do. Handover includes full documentation and ownership of code and assets.",
-  },
-  {
-    q: "What does the free consultation include?",
-    a: "A short discovery call to talk through what you need, how we’d approach it, and whether we’re a fit — with clear next steps in writing.",
-  },
-  {
-    q: "What does the free audit include?",
-    a: "A written review of speed, technical SEO and structure, with the highest-impact fixes listed first.",
-  },
-];
+import { homeFaqs } from "@/lib/faqs";
 
 export function Faq() {
   const [open, setOpen] = useState(0);
@@ -39,7 +9,7 @@ export function Faq() {
 
   return (
     <div className="divide-y divide-line border-y border-line">
-      {faqs.map((item, index) => {
+      {homeFaqs.map((item, index) => {
         const isOpen = open === index;
         const panelId = `${baseId}-panel-${index}`;
         const buttonId = `${baseId}-button-${index}`;

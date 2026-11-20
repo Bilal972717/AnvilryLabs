@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import { CustomSelect } from "@/components/CustomSelect";
+import { trackEvent } from "@/lib/analytics";
 
 const fieldClass =
   "w-full rounded-lg border border-line bg-panel-muted px-3.5 py-3 text-sm text-ink outline-none transition placeholder:text-steel/80 focus:border-heat/50 focus:ring-2 focus:ring-heat/30";
@@ -41,6 +42,7 @@ export function ContactForm() {
 
     setDraft({ name, email, interest, about, subject, body, mailto });
     setCopied(false);
+    trackEvent("contact_form_submit", { interest });
     window.location.href = mailto;
   }
 
